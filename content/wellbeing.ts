@@ -89,7 +89,7 @@ export const wellbeingContent: ContentItem[] = [
     region: 'east',
     contact: {
       phone: '+94 65 222 4781',
-      website: 'https://www.psychosocial-support-lk.org',
+      website: 'https://www.health.gov.lk',
       address: 'Batticaloa',
     },
     type: 'resource',
@@ -104,7 +104,7 @@ export const wellbeingContent: ContentItem[] = [
     region: 'national',
     contact: {
       phone: '+94 11 257 8234',
-      website: 'https://www.health.gov.lk/moh_final/english/others.php?spession=17',
+      website: 'https://www.health.gov.lk',
       address: 'Angoda, Colombo',
     },
     type: 'resource',

@@ -84,7 +84,7 @@ export const healthContent: ContentItem[] = [
     region: 'north',
     contact: {
       phone: '+94 21 222 2261',
-      website: 'https://www.health.gov.lk/moh_final/english/hospital.php?spession=Jaffna',
+      website: 'https://www.health.gov.lk',
       address: 'Hospital Road, Jaffna',
     },
     type: 'resource',
@@ -99,7 +99,7 @@ export const healthContent: ContentItem[] = [
     region: 'east',
     contact: {
       phone: '+94 65 222 2261',
-      website: 'https://www.health.gov.lk/moh_final/english/hospital.php?spession=Batticaloa',
+      website: 'https://www.health.gov.lk',
       address: 'Batticaloa',
     },
     type: 'resource',

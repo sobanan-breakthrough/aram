@@ -69,7 +69,6 @@ export const sharedContent: ContentItem[] = [
     contact: {
       phone: '+94 11 259 5064',
       email: 'info@nafso-online.org',
-      website: 'https://nafso-online.org',
     },
     type: 'resource',
   },
@@ -97,7 +96,7 @@ export const sharedContent: ContentItem[] = [
     region: 'north',
     contact: {
       phone: '+94 21 222 8310',
-      website: 'https://www.zoa.ngo',
+      website: 'https://zoa.ngo',
       address: 'Jaffna, Northern Province',
     },
     type: 'resource',
@@ -113,7 +112,7 @@ export const sharedContent: ContentItem[] = [
     tags: ['government', 'services', 'ID card', 'certificates', 'Samurdhi', 'local'],
     region: 'all',
     contact: {
-      website: 'https://www.pubad.gov.lk/web/index.php?option=com_content&view=article&id=114&Itemid=143&lang=en',
+      website: 'https://www.pubad.gov.lk',
     },
     type: 'resource',
   },

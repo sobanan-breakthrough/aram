@@ -52,6 +52,9 @@ export const technologyContent: ContentItem[] = [
     bodyTa: 'AI (செயற்கை நுண்ணறிவு) தரவுகளிலிருந்து கற்றுக்கொண்டு பொதுவாக மனித சிந்தனை தேவைப்படும் பணிகளை செய்யக்கூடிய தொழில்நுட்பம். நீங்கள் ஏற்கனவே தினமும் AI-ஐ பயன்படுத்துகிறீர்கள்: குரல் உதவியாளர்கள், செய்தி தட்டச்சு செய்யும்போது தானியங்கு நிறைவு, Instagram புகைப்பட வடிகட்டிகள், YouTube வீடியோ பரிந்துரைகள். இலவச AI கருவிகள்: ChatGPT மற்றும் Google Gemini கடிதங்கள் எழுத, மொழிபெயர்க்க, கடினமான கருத்துக்களை விளக்க, வீட்டுப்பாடத்திற்கு உதவ, வணிக யோசனைகளை பிறப்பிக்க உதவும்.',
     tags: ['AI', 'digital literacy', 'beginner', 'ChatGPT', 'Gemini', 'tools'],
     region: 'all',
+    contact: {
+      website: 'https://chatgpt.com',
+    },
     type: 'explainer',
   },
   {
@@ -62,6 +65,9 @@ export const technologyContent: ContentItem[] = [
     bodyTa: 'பல AI கருவிகள் இப்போது தமிழில் நன்றாக வேலை செய்கின்றன. நீங்கள் செய்யலாம்: ChatGPT அல்லது Google Gemini-க்கு தமிழில் கேள்விகளை தட்டச்சு செய்து தமிழ் பதில்களைப் பெறலாம், Google Translate-ஐ தமிழ் மற்றும் பிற மொழிகளுக்கு இடையில் மொழிபெயர்க்க பயன்படுத்தலாம் (புகைப்படங்களுடனும் வேலை செய்யும்), உங்கள் தொலைபேசியில் தமிழில் குரல் தட்டச்சு பயன்படுத்தலாம், Google Lens பயன்படுத்தி அறிவிப்புகள், மெனுக்கள் மொழிபெயர்க்கலாம்.',
     tags: ['AI', 'Tamil', 'Google Translate', 'voice typing', 'practical'],
     region: 'all',
+    contact: {
+      website: 'https://translate.google.com',
+    },
     type: 'explainer',
   },
 
@@ -74,6 +80,9 @@ export const technologyContent: ContentItem[] = [
     bodyTa: 'அடிப்படை Android ஸ்மார்ட்ஃபோன்களில் வேலை செய்யும் அத்தியாவசிய இலவச கருவிகள்: **தொடர்பு**: WhatsApp, WhatsApp Business. **பணம்**: Google Sheets (கணக்கு). **கற்றல்**: Khan Academy (தமிழ் கணிதம் மற்றும் அறிவியல்), YouTube, Duolingo (ஆங்கிலம் கற்க). **வடிவமைப்பு**: Canva (போஸ்டர்கள், லோகோக்கள் உருவாக்க). **வீடியோ**: CapCut (இலவச வீடியோ எடிட்டிங்). **மொழிபெயர்ப்பு**: Google Translate. **வழிசெலுத்தல்**: Google Maps.',
     tags: ['tools', 'free', 'smartphone', 'apps', 'Android', 'essential'],
     region: 'all',
+    contact: {
+      website: 'https://play.google.com/store',
+    },
     type: 'resource',
   },
   {
@@ -84,6 +93,9 @@ export const technologyContent: ContentItem[] = [
     bodyTa: 'உங்கள் ஸ்மார்ட்ஃபோன் வருமானம் ஈட்டும் கருவியாக இருக்கலாம். யதார்த்தமான விருப்பங்கள்: Fiverr போன்ற தளங்களில் ஃப்ரீலான்சிங் (மொழிபெயர்ப்பு, தரவு உள்ளீடு, வாய்ஓவர், வடிவமைப்பு), Facebook Marketplace அல்லது WhatsApp குழுக்கள் மூலம் கைவினைப் பொருட்கள் விற்பனை, வீடியோ அழைப்புகள் மூலம் பயிற்சி, YouTube-இல் தமிழ் உள்ளடக்கம் உருவாக்குதல். நீங்கள் ஏற்கனவே அறிந்த ஒன்றுடன் சிறிதாக தொடங்குங்கள்.',
     tags: ['income', 'freelancing', 'digital work', 'smartphone', 'earning'],
     region: 'all',
+    contact: {
+      website: 'https://www.fiverr.com',
+    },
     type: 'explainer',
   },
 ];

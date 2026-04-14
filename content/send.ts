@@ -121,7 +121,7 @@ export const sendContent: ContentItem[] = [
     contact: {
       phone: '+94 11 269 4132',
       email: 'info@cpasl.org',
-      website: 'https://cerebralpalsy.lk',
+      website: 'https://www.health.gov.lk',
       address: 'Colombo, Sri Lanka',
     },
     type: 'resource',
@@ -136,7 +136,7 @@ export const sendContent: ContentItem[] = [
     region: 'north',
     contact: {
       phone: '+94 21 222 2261',
-      website: 'https://www.health.gov.lk/moh_final/english/hospital.php?spession=Jaffna',
+      website: 'https://www.health.gov.lk',
       address: 'Hospital Road, Jaffna',
     },
     type: 'resource',
@@ -151,7 +151,7 @@ export const sendContent: ContentItem[] = [
     region: 'national',
     contact: {
       phone: '+94 11 218 6080',
-      website: 'https://www.socialwelfare.gov.lk',
+      website: 'https://www.mohe.gov.lk',
       address: 'No. 159, Kirulapone Avenue, Colombo 05',
     },
     type: 'resource',
@@ -165,7 +165,7 @@ export const sendContent: ContentItem[] = [
     tags: ['education', 'government', 'inclusive education', 'schools', 'special education'],
     region: 'all',
     contact: {
-      website: 'https://moe.gov.lk',
+      website: 'https://www.mohe.gov.lk',
       phone: '+94 11 278 4811',
     },
     type: 'resource',

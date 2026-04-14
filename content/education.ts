@@ -74,7 +74,7 @@ export const educationContent: ContentItem[] = [
     tags: ['scholarships', 'financial aid', 'university', 'school', 'Mahapola', 'diaspora'],
     region: 'all',
     contact: {
-      website: 'https://www.ugc.ac.lk',
+      website: 'https://www.jfn.ac.lk',
     },
     type: 'resource',
   },
