@@ -1,65 +1,140 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import { useLocale } from '@/lib/locale-context';
+import PillarCard from '@/components/PillarCard';
+import AccordionSection from '@/components/AccordionSection';
+import ResourceCard from '@/components/ResourceCard';
+import { getRandomResource } from '@/lib/search';
+import {
+  Heart,
+  Accessibility,
+  Stethoscope,
+  Smartphone,
+  Users,
+  GraduationCap,
+  Globe,
+  ArrowRight,
+} from 'lucide-react';
+import Link from 'next/link';
+
+const pillars = [
+  {
+    icon: Heart,
+    titleEn: 'Wellbeing',
+    titleTa: 'நல்வாழ்வு',
+    descriptionEn: 'Mental, emotional, and spiritual support',
+    descriptionTa: 'மன, உணர்வு மற்றும் ஆன்மீக ஆதரவு',
+    href: '/wellbeing',
+  },
+  {
+    icon: Accessibility,
+    titleEn: 'SEND',
+    titleTa: 'SEND',
+    descriptionEn: 'Special Educational Needs & Disabilities',
+    descriptionTa: 'சிறப்புக் கல்வித் தேவைகள் & குறைபாடுகள்',
+    href: '/send',
+  },
+  {
+    icon: Stethoscope,
+    titleEn: 'Healthcare',
+    titleTa: 'சுகாதாரம்',
+    descriptionEn: 'Health education and signposting',
+    descriptionTa: 'சுகாதார கல்வி மற்றும் வழிகாட்டல்',
+    href: '/health',
+  },
+  {
+    icon: Smartphone,
+    titleEn: 'Technology',
+    titleTa: 'தொழில்நுட்பம்',
+    descriptionEn: 'Digital skills and the creator economy',
+    descriptionTa: 'டிஜிட்டல் திறன்கள் மற்றும் படைப்பாளர் பொருளாதாரம்',
+    href: '/technology',
+  },
+  {
+    icon: Users,
+    titleEn: 'Community',
+    titleTa: 'சமூகம்',
+    descriptionEn: 'Enterprise and economic resilience',
+    descriptionTa: 'நிறுவனம் மற்றும் பொருளாதார நெகிழ்திறன்',
+    href: '/community',
+  },
+  {
+    icon: GraduationCap,
+    titleEn: 'Education',
+    titleTa: 'கல்வி',
+    descriptionEn: 'Learning support for all ages',
+    descriptionTa: 'அனைத்து வயதினருக்கான கற்றல் ஆதரவு',
+    href: '/education',
+  },
+  {
+    icon: Globe,
+    titleEn: 'Diaspora',
+    titleTa: 'புலம்பெயர்வு',
+    descriptionEn: 'Connect with and support Sri Lanka',
+    descriptionTa: 'இலங்கையுடன் இணையுங்கள் மற்றும் ஆதரியுங்கள்',
+    href: '/diaspora',
+  },
+];
+
+export default function HomePage() {
+  const { locale } = useLocale();
+  const todaysResource = getRandomResource();
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="space-y-6">
+      {/* Bilingual welcome — intentionally both languages shown */}
+      <div className="text-center py-4">
+        <h1 className="text-2xl font-bold text-primary">Welcome to Aram</h1>
+        <h2 className="text-xl font-bold text-primary font-tamil mt-1">
+          அறத்திற்கு வரவேற்கிறோம்
+        </h2>
+        <p className="text-sm text-text-secondary mt-2 max-w-xs mx-auto">
+          {locale === 'en'
+            ? 'Resources for stronger communities. Built with you, not for you.'
+            : 'வலுவான சமூகங்களுக்கான வளங்கள். உங்களுக்காக அல்ல, உங்களுடன் கட்டப்பட்டது.'}
+        </p>
+      </div>
+
+      {/* Pillar grid */}
+      <div className="grid grid-cols-2 gap-3">
+        {pillars.map(pillar => (
+          <PillarCard key={pillar.href} {...pillar} />
+        ))}
+      </div>
+
+      {/* Today's Resource */}
+      <div>
+        <h3 className="text-sm font-semibold text-text-primary mb-2">
+          {locale === 'en' ? "Today's Resource" : 'இன்றைய வளம்'}
+        </h3>
+        <ResourceCard item={todaysResource} />
+      </div>
+
+      {/* Diaspora callout */}
+      <Link
+        href="/diaspora"
+        className="flex items-center justify-between rounded-xl bg-primary/5 border border-primary/20 p-4 hover:bg-primary/10 transition-colors"
+        aria-label={locale === 'en' ? 'Coming from abroad? Start here' : 'வெளிநாட்டிலிருந்து வருகிறீர்களா? இங்கே தொடங்குங்கள்'}
+      >
+        <div className="flex items-center gap-3">
+          <Globe className="h-5 w-5 text-primary" aria-hidden="true" />
+          <span className="text-sm font-medium text-text-primary">
+            {locale === 'en' ? 'Coming from abroad? Start here' : 'வெளிநாட்டிலிருந்து வருகிறீர்களா? இங்கே தொடங்குங்கள்'}
+          </span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+        <ArrowRight className="h-4 w-4 text-primary" aria-hidden="true" />
+      </Link>
+
+      {/* How to use */}
+      <AccordionSection
+        title={locale === 'en' ? 'How to use this app' : 'இந்த செயலியை எப்படி பயன்படுத்துவது'}
+      >
+        <p className="text-sm text-text-secondary leading-relaxed">
+          {locale === 'en'
+            ? 'Aram is a community resource platform with seven pillars of support. Tap any pillar above to explore resources, guides, and tools. Use the language toggle (EN/த) at the top to switch between English and Tamil. All content works offline once loaded.'
+            : 'அறம் ஏழு தூண்களின் ஆதரவுடன் ஒரு சமூக வள தளமாகும். எந்த தூணையும் தட்டி வளங்கள், வழிகாட்டிகள் மற்றும் கருவிகளை ஆராயுங்கள். மேலே உள்ள மொழி மாற்றியை (EN/த) பயன்படுத்தி ஆங்கிலம் மற்றும் தமிழ் இடையே மாறுங்கள். ஒருமுறை ஏற்றப்பட்ட அனைத்து உள்ளடக்கமும் இணைப்பில்லாமலும் செயல்படும்.'}
+        </p>
+      </AccordionSection>
     </div>
   );
 }

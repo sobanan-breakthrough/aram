@@ -1,0 +1,63 @@
+import type { ContentItem } from '@/lib/types';
+
+export const healthContent: ContentItem[] = [
+  {
+    id: 'health-1',
+    titleEn: 'Diabetes Awareness',
+    titleTa: 'நீரிழிவு நோய் விழிப்புணர்வு',
+    bodyEn: 'Diabetes is common in Sri Lanka. Warning signs include increased thirst, frequent urination, fatigue, and blurred vision. If you experience these, visit your nearest health centre for a blood sugar test. Managing diet, exercise, and medication can help you live well with diabetes.',
+    bodyTa: 'நீரிழிவு நோய் இலங்கையில் பொதுவானது. அதிகரித்த தாகம், அடிக்கடி சிறுநீர் கழித்தல், சோர்வு, மங்கலான பார்வை ஆகியவை எச்சரிக்கை அறிகுறிகள். இவற்றை அனுபவித்தால், இரத்த சர்க்கரை பரிசோதனைக்கு அருகிலுள்ள சுகாதார மையத்திற்கு செல்லுங்கள்.',
+    tags: ['diabetes', 'chronic disease', 'awareness'],
+    region: 'all',
+    type: 'explainer',
+  },
+  {
+    id: 'health-2',
+    titleEn: 'Jaffna Teaching Hospital',
+    titleTa: 'யாழ்ப்பாண போதனா மருத்துவமனை',
+    bodyEn: 'The main referral hospital for the Northern Province. Provides specialist services including surgery, obstetrics, paediatrics, and mental health. Located in Jaffna town centre. Emergency services available 24/7.',
+    bodyTa: 'வடக்கு மாகாணத்தின் முக்கிய பரிந்துரை மருத்துவமனை. அறுவை சிகிச்சை, மகப்பேறு, குழந்தை மருத்துவம் மற்றும் மனநலம் உள்ளிட்ட நிபுணர் சேவைகளை வழங்குகிறது. யாழ்ப்பாண நகர மையத்தில் அமைந்துள்ளது. அவசர சேவைகள் 24/7 கிடைக்கும்.',
+    tags: ['hospital', 'emergency', 'Northern Province'],
+    region: 'north',
+    contact: {
+      phone: '+94 21 222 2261',
+      address: 'Hospital Road, Jaffna',
+    },
+    type: 'resource',
+  },
+  {
+    id: 'health-3',
+    titleEn: 'Peer Health Supporter Guide',
+    titleTa: 'சக சுகாதார ஆதரவாளர் வழிகாட்டி',
+    bodyEn: 'A guide for community members on how to help neighbours navigate the health system. Includes tips on understanding prescriptions, asking the right questions at hospital, and when to accompany someone versus encouraging independence.',
+    bodyTa: 'அண்டை வீட்டாருக்கு சுகாதார முறையில் வழிசெலுத்த உதவுவது பற்றிய சமூக உறுப்பினர்களுக்கான வழிகாட்டி. மருந்துச் சீட்டுகளைப் புரிந்துகொள்ளுதல், மருத்துவமனையில் சரியான கேள்விகளைக் கேட்பது, யாரையேனும் உடன் அழைத்துச் செல்ல வேண்டும் என்பது பற்றிய குறிப்புகள் உள்ளடக்கியது.',
+    tags: ['peer support', 'health literacy', 'training'],
+    region: 'all',
+    type: 'guide',
+    trainerResource: true,
+  },
+  {
+    id: 'health-4',
+    titleEn: 'Maternal Health',
+    titleTa: 'தாய்மை சுகாதாரம்',
+    bodyEn: 'Every pregnant woman in Sri Lanka is entitled to free antenatal care through the MOH system. Visit your local MOH clinic as early as possible in pregnancy. You will receive regular check-ups, iron supplements, and support. The midwife (Public Health Midwife) is your key contact.',
+    bodyTa: 'இலங்கையில் ஒவ்வொரு கர்ப்பிணிப் பெண்ணுக்கும் MOH முறை மூலம் இலவச பிரசவ முன் பராமரிப்பு உரிமை உண்டு. கர்ப்பத்தின் ஆரம்பத்திலேயே உங்கள் உள்ளூர் MOH மருத்துவ நிலையத்திற்கு செல்லுங்கள். வழக்கமான பரிசோதனைகள், இரும்பு மாத்திரைகள் மற்றும் ஆதரவு பெறுவீர்கள்.',
+    tags: ['maternal', 'pregnancy', 'women'],
+    region: 'all',
+    type: 'explainer',
+  },
+  {
+    id: 'health-5',
+    titleEn: 'Batticaloa Teaching Hospital',
+    titleTa: 'மட்டக்களப்பு போதனா மருத்துவமனை',
+    bodyEn: 'The main referral hospital for the Eastern Province. Provides general and specialist services. Has been expanded since 2010 to better serve the region. Emergency department available 24/7.',
+    bodyTa: 'கிழக்கு மாகாணத்தின் முக்கிய பரிந்துரை மருத்துவமனை. பொது மற்றும் நிபுணர் சேவைகளை வழங்குகிறது. 2010 முதல் பிராந்தியத்திற்கு சிறப்பாக சேவை செய்ய விரிவாக்கப்பட்டுள்ளது. அவசர சிகிச்சை பிரிவு 24/7 கிடைக்கும்.',
+    tags: ['hospital', 'emergency', 'Eastern Province'],
+    region: 'east',
+    contact: {
+      phone: '+94 65 222 2261',
+      address: 'Batticaloa',
+    },
+    type: 'resource',
+  },
+];

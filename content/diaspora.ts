@@ -1,0 +1,57 @@
+import type { ContentItem } from '@/lib/types';
+
+export const diasporaContent: ContentItem[] = [
+  {
+    id: 'dia-1',
+    titleEn: 'Visiting the North and East — Practical Guide',
+    titleTa: 'வடக்கு மற்றும் கிழக்கு பயணம் — நடைமுறை வழிகாட்டி',
+    bodyEn: 'If you are visiting from abroad: Jaffna has regular flights from Colombo and improved road access via the A9. Accommodation ranges from guesthouses to hotels. Local transport includes buses, three-wheelers, and motorbike hire. Health precautions: bring any prescription medications you need, drink bottled water, and use mosquito protection.',
+    bodyTa: 'நீங்கள் வெளிநாட்டிலிருந்து வருகை தருகிறீர்கள் என்றால்: யாழ்ப்பாணத்திற்கு கொழும்பிலிருந்து வழக்கமான விமானங்கள் உள்ளன மற்றும் A9 வழியாக சாலை அணுகல் மேம்படுத்தப்பட்டுள்ளது. விருந்தினர் இல்லங்கள் முதல் ஹோட்டல்கள் வரை தங்குமிடம் உள்ளது.',
+    tags: ['visiting', 'travel', 'practical'],
+    region: 'north',
+    type: 'guide',
+  },
+  {
+    id: 'dia-2',
+    titleEn: 'Sending Money Home Safely',
+    titleTa: 'பாதுகாப்பாக பணம் அனுப்புதல்',
+    bodyEn: 'Common remittance options: bank transfer (reliable but slow), Western Union/MoneyGram (fast but higher fees), online services like Wise or Remitly (competitive rates, phone-friendly). Always compare fees and exchange rates. Avoid informal channels — they carry legal and financial risks.',
+    bodyTa: 'பொதுவான பணம் அனுப்பும் விருப்பங்கள்: வங்கி பரிமாற்றம் (நம்பகமானது ஆனால் மெதுவானது), Western Union/MoneyGram (வேகமானது ஆனால் அதிக கட்டணம்), Wise அல்லது Remitly போன்ற ஆன்லைன் சேவைகள் (போட்டி விகிதங்கள்). கட்டணங்கள் மற்றும் மாற்று விகிதங்களை எப்போதும் ஒப்பிடுங்கள்.',
+    tags: ['remittance', 'money transfer', 'finance'],
+    region: 'diaspora',
+    type: 'guide',
+  },
+  {
+    id: 'dia-3',
+    titleEn: 'Being Helpful Without Being Extractive',
+    titleTa: 'சுரண்டாமல் உதவிகரமாக இருத்தல்',
+    bodyEn: 'When visiting or supporting communities from abroad: listen more than you speak. Ask what people need rather than assuming. Respect local knowledge and decision-making. Donating money is valuable, but so is donating skills, time, and connections. Long-term partnerships matter more than one-time visits.',
+    bodyTa: 'வெளிநாட்டிலிருந்து சமூகங்களுக்கு உதவும்போது: நீங்கள் பேசுவதை விட அதிகமாக கேளுங்கள். மக்களுக்கு என்ன தேவை என்று கருதுவதை விட கேளுங்கள். உள்ளூர் அறிவையும் முடிவெடுத்தலையும் மதியுங்கள். பணம் நன்கொடை மதிப்புமிக்கது, ஆனால் திறன்கள், நேரம், தொடர்புகளை நன்கொடை செய்வதும் அவ்வாறே.',
+    tags: ['community', 'ethics', 'diaspora engagement'],
+    region: 'diaspora',
+    type: 'explainer',
+  },
+  {
+    id: 'dia-4',
+    titleEn: 'Reconnecting with Tamil Language',
+    titleTa: 'தமிழ் மொழியுடன் மீண்டும் இணைதல்',
+    bodyEn: 'If you grew up abroad and lost fluency in Tamil, it is never too late to reconnect. Free resources: Tamil Virtual Academy online courses, YouTube Tamil lessons, language exchange apps like Tandem. Start with listening — Tamil music, podcasts, and films. Speaking will follow.',
+    bodyTa: 'நீங்கள் வெளிநாட்டில் வளர்ந்து தமிழில் சரளத்தை இழந்திருந்தால், மீண்டும் இணைய ஒருபோதும் தாமதமாகாது. இலவச வளங்கள்: தமிழ் மெய்நிகர் கல்விக்கழகம் ஆன்லைன் படிப்புகள், YouTube தமிழ் பாடங்கள், Tandem போன்ற மொழி பரிமாற்ற செயலிகள்.',
+    tags: ['language', 'Tamil', 'diaspora', 'learning'],
+    region: 'diaspora',
+    type: 'resource',
+    contact: {
+      website: 'https://tamilvu.org',
+    },
+  },
+  {
+    id: 'dia-5',
+    titleEn: 'Investing in Sri Lanka as a Diaspora Member',
+    titleTa: 'புலம்பெயர்ந்தோராக இலங்கையில் முதலீடு செய்தல்',
+    bodyEn: 'Non-Resident Sri Lankans (NRSLs) can invest in property and business. Key considerations: legal requirements vary — consult a Sri Lankan lawyer. Property purchases require BOI approval in some cases. Start small and understand the local market. Be aware of currency fluctuation risks and the current economic climate.',
+    bodyTa: 'வெளிநாட்டில் வசிக்கும் இலங்கையர்கள் (NRSLs) சொத்து மற்றும் வணிகத்தில் முதலீடு செய்யலாம். முக்கிய கருத்துக்கள்: சட்ட தேவைகள் மாறுபடும் — இலங்கை வழக்கறிஞரை ஆலோசியுங்கள். சில சந்தர்ப்பங்களில் சொத்து வாங்குவதற்கு BOI அனுமதி தேவை.',
+    tags: ['investment', 'property', 'business', 'NRSL'],
+    region: 'diaspora',
+    type: 'explainer',
+  },
+];

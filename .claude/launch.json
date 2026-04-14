@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "aram-dev",
+      "runtimeExecutable": "/Users/breakthroughsocialenterprise/.nvm/versions/node/v20.20.2/bin/npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000,
+      "env": {
+        "PATH": "/Users/breakthroughsocialenterprise/.nvm/versions/node/v20.20.2/bin:/usr/local/bin:/usr/bin:/bin"
+      }
+    }
+  ]
+}

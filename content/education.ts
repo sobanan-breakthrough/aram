@@ -1,0 +1,57 @@
+import type { ContentItem } from '@/lib/types';
+
+export const educationContent: ContentItem[] = [
+  {
+    id: 'edu-1',
+    titleEn: 'Supporting Learning at Home',
+    titleTa: 'வீட்டில் கற்றலை ஆதரித்தல்',
+    bodyEn: 'You do not need expensive materials to support your child\'s education. Read together daily — even a newspaper or a shop sign. Ask your child to explain what they learned at school. Create a quiet space for homework, even if it is just a corner of a room. Show interest in their learning.',
+    bodyTa: 'உங்கள் குழந்தையின் கல்வியை ஆதரிக்க விலையுயர்ந்த பொருட்கள் தேவையில்லை. தினமும் ஒன்றாகப் படியுங்கள் — ஒரு செய்தித்தாள் அல்லது கடை அறிவிப்பு கூட போதும். பள்ளியில் கற்றதை விளக்கச் சொல்லுங்கள். வீட்டுப்பாடத்திற்கு ஒரு அமைதியான இடத்தை உருவாக்குங்கள்.',
+    tags: ['home learning', 'parents', 'children'],
+    region: 'all',
+    type: 'guide',
+  },
+  {
+    id: 'edu-2',
+    titleEn: 'Khan Academy Tamil',
+    titleTa: 'கான் அகாடமி தமிழ்',
+    bodyEn: 'Khan Academy offers free maths, science, and computing courses in Tamil. Accessible on any smartphone with an internet connection. Great for students preparing for O/L and A/L examinations and for adult learners wanting to improve their skills.',
+    bodyTa: 'கான் அகாடமி தமிழில் இலவச கணிதம், அறிவியல் மற்றும் கணினி படிப்புகளை வழங்குகிறது. இணைய இணைப்புடன் எந்த ஸ்மார்ட்ஃபோனிலும் அணுகலாம். O/L மற்றும் A/L தேர்வுகளுக்கு தயாராகும் மாணவர்களுக்கும் திறன்களை மேம்படுத்த விரும்பும் பெரியவர் கற்போருக்கும் சிறந்தது.',
+    tags: ['online learning', 'free', 'maths', 'science'],
+    region: 'all',
+    contact: {
+      website: 'https://ta.khanacademy.org',
+    },
+    type: 'resource',
+  },
+  {
+    id: 'edu-3',
+    titleEn: 'University Pathways for Tamil Students',
+    titleTa: 'தமிழ் மாணவர்களுக்கான பல்கலைக்கழக பாதைகள்',
+    bodyEn: 'The University of Jaffna and Eastern University offer degree programmes in Tamil medium. Entry is through the A/L examination and UGC selection. Distance learning through the Open University of Sri Lanka is available for those who cannot attend full-time. Inquire at your nearest university extension centre.',
+    bodyTa: 'யாழ்ப்பாண பல்கலைக்கழகம் மற்றும் கிழக்கு பல்கலைக்கழகம் தமிழ் மொழியில் பட்டப்படிப்பு திட்டங்களை வழங்குகின்றன. A/L தேர்வு மற்றும் UGC தேர்வு மூலம் நுழைவு. முழுநேரம் கலந்துகொள்ள இயலாதவர்களுக்கு இலங்கை திறந்த பல்கலைக்கழகம் மூலம் தொலைதூர கற்றல் கிடைக்கும்.',
+    tags: ['university', 'higher education', 'Tamil medium'],
+    region: 'national',
+    type: 'explainer',
+  },
+  {
+    id: 'edu-4',
+    titleEn: 'Non-Formal Education for Adults',
+    titleTa: 'பெரியவர்களுக்கான முறைசாரா கல்வி',
+    bodyEn: 'If you missed formal schooling, there are options. The National Institute of Education runs adult literacy programmes. Some NGOs in the North and East offer vocational training in trades like carpentry, electrical work, and IT skills. Contact your Divisional Secretariat for local options.',
+    bodyTa: 'நீங்கள் முறையான பள்ளிக்கல்வியை இழந்திருந்தால், விருப்பங்கள் உள்ளன. தேசிய கல்வி நிறுவனம் பெரியவர் எழுத்தறிவு திட்டங்களை நடத்துகிறது. வடக்கு மற்றும் கிழக்கில் சில NGO-க்கள் தச்சு, மின்சார வேலை, IT திறன்கள் போன்ற தொழிற்பயிற்சியை வழங்குகின்றன.',
+    tags: ['adult education', 'literacy', 'vocational'],
+    region: 'all',
+    type: 'explainer',
+  },
+  {
+    id: 'edu-5',
+    titleEn: 'Diaspora-Funded Scholarships',
+    titleTa: 'புலம்பெயர்ந்தோர் நிதியுதவி புலமைப்பரிசில்கள்',
+    bodyEn: 'Several Tamil diaspora organisations offer scholarships for students in the North and East. These typically cover school supplies, tuition fees, or university costs. Applications usually open at the start of the academic year. Check with your school principal or local education office for current opportunities.',
+    bodyTa: 'பல தமிழ் புலம்பெயர்ந்தோர் நிறுவனங்கள் வடக்கு மற்றும் கிழக்கில் மாணவர்களுக்கு புலமைப்பரிசில்களை வழங்குகின்றன. இவை பொதுவாக பள்ளி பொருட்கள், கல்விக் கட்டணம் அல்லது பல்கலைக்கழக செலவுகளை ஈடுகட்டுகின்றன. விண்ணப்பங்கள் பொதுவாக கல்வி ஆண்டின் தொடக்கத்தில் திறக்கப்படும்.',
+    tags: ['scholarships', 'diaspora', 'financial aid'],
+    region: 'all',
+    type: 'resource',
+  },
+];
