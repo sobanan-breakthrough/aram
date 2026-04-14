@@ -84,6 +84,7 @@ export const healthContent: ContentItem[] = [
     region: 'north',
     contact: {
       phone: '+94 21 222 2261',
+      website: 'https://www.health.gov.lk/moh_final/english/hospital.php?spession=Jaffna',
       address: 'Hospital Road, Jaffna',
     },
     type: 'resource',
@@ -98,6 +99,7 @@ export const healthContent: ContentItem[] = [
     region: 'east',
     contact: {
       phone: '+94 65 222 2261',
+      website: 'https://www.health.gov.lk/moh_final/english/hospital.php?spession=Batticaloa',
       address: 'Batticaloa',
     },
     type: 'resource',
@@ -112,6 +114,7 @@ export const healthContent: ContentItem[] = [
     region: 'north',
     contact: {
       phone: '+94 21 228 3261',
+      website: 'https://www.health.gov.lk',
       address: 'Kilinochchi',
     },
     type: 'resource',
@@ -125,6 +128,8 @@ export const healthContent: ContentItem[] = [
     tags: ['hospital', 'Mullaitivu', 'Northern Province'],
     region: 'north',
     contact: {
+      phone: '+94 21 229 0261',
+      website: 'https://www.health.gov.lk',
       address: 'Mullaitivu',
     },
     type: 'resource',
@@ -138,6 +143,8 @@ export const healthContent: ContentItem[] = [
     tags: ['hospital', 'Trincomalee', 'Eastern Province', 'emergency'],
     region: 'east',
     contact: {
+      phone: '+94 26 222 2261',
+      website: 'https://www.health.gov.lk',
       address: 'Trincomalee',
     },
     type: 'resource',

@@ -134,6 +134,7 @@ export const technologyPathways: PathwayItem[] = [
     ],
     resourcesEn: ['YouTube Creator Academy (free online course)', 'Canva — free thumbnail and graphics maker', 'CapCut — free video editor for phone', 'VN Video Editor — alternative free editor'],
     resourcesTa: ['YouTube Creator Academy (இலவச ஆன்லைன் படிப்பு)', 'Canva — இலவச சிறு படம் மற்றும் வடிவமைப்பு', 'CapCut — தொலைபேசிக்கான இலவச வீடியோ எடிட்டர்', 'VN Video Editor — மாற்று இலவச எடிட்டர்'],
+    resourceLinks: ['https://creatoracademy.youtube.com', 'https://www.canva.com', 'https://www.capcut.com', 'https://www.vlognow.me'],
   },
   {
     id: 'pathway-digital-seller',
@@ -180,6 +181,7 @@ export const technologyPathways: PathwayItem[] = [
     ],
     resourcesEn: ['Facebook Business Suite (free)', 'WhatsApp Business (free)', 'Canva for product graphics (free)', 'Google Sheets for tracking orders and finances'],
     resourcesTa: ['Facebook Business Suite (இலவசம்)', 'WhatsApp Business (இலவசம்)', 'தயாரிப்பு வடிவமைப்புக்கு Canva (இலவசம்)', 'ஆர்டர்கள் மற்றும் நிதி கண்காணிக்க Google Sheets'],
+    resourceLinks: ['https://business.facebook.com', 'https://www.whatsapp.com/business', 'https://www.canva.com', 'https://sheets.google.com'],
   },
   {
     id: 'pathway-freelancer',
@@ -224,6 +226,7 @@ export const technologyPathways: PathwayItem[] = [
     ],
     resourcesEn: ['Fiverr (fiverr.com) — best for beginners', 'Upwork (upwork.com) — better for longer projects', 'Canva for design work (free tier)', 'Google Docs for writing and collaboration'],
     resourcesTa: ['Fiverr (fiverr.com) — தொடக்கநிலையாளர்களுக்கு சிறந்தது', 'Upwork (upwork.com) — நீண்ட திட்டங்களுக்கு சிறந்தது', 'வடிவமைப்பு வேலைக்கு Canva (இலவசம்)', 'எழுதுவதற்கும் ஒத்துழைப்புக்கும் Google Docs'],
+    resourceLinks: ['https://www.fiverr.com', 'https://www.upwork.com', 'https://www.canva.com', 'https://docs.google.com'],
   },
   {
     id: 'pathway-educator',
@@ -270,5 +273,6 @@ export const technologyPathways: PathwayItem[] = [
     ],
     resourcesEn: ['WhatsApp (free)', 'Google Meet (free, up to 60 minutes)', 'Google Classroom (free, for organising courses)', 'Canva for creating lesson materials (free)'],
     resourcesTa: ['WhatsApp (இலவசம்)', 'Google Meet (இலவசம், 60 நிமிடங்கள் வரை)', 'Google Classroom (இலவசம், படிப்புகளை ஒழுங்கமைக்க)', 'பாட பொருட்கள் உருவாக்க Canva (இலவசம்)'],
+    resourceLinks: ['https://www.whatsapp.com', 'https://meet.google.com', 'https://classroom.google.com', 'https://www.canva.com'],
   },
 ];

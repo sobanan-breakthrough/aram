@@ -27,6 +27,7 @@ export const wellbeingContent: ContentItem[] = [
     region: 'national',
     contact: {
       phone: '1926',
+      website: 'https://www.health.gov.lk',
     },
     type: 'resource',
   },
@@ -40,6 +41,7 @@ export const wellbeingContent: ContentItem[] = [
     region: 'national',
     contact: {
       phone: '1938',
+      website: 'https://childprotection.gov.lk',
     },
     type: 'resource',
   },
@@ -72,6 +74,7 @@ export const wellbeingContent: ContentItem[] = [
     contact: {
       phone: '+94 21 222 5494',
       email: 'frcjaffna@gmail.com',
+      website: 'https://frcsl.org',
       address: 'Jaffna, Northern Province',
     },
     type: 'resource',
@@ -86,6 +89,7 @@ export const wellbeingContent: ContentItem[] = [
     region: 'east',
     contact: {
       phone: '+94 65 222 4781',
+      website: 'https://www.psychosocial-support-lk.org',
       address: 'Batticaloa',
     },
     type: 'resource',
@@ -100,6 +104,7 @@ export const wellbeingContent: ContentItem[] = [
     region: 'national',
     contact: {
       phone: '+94 11 257 8234',
+      website: 'https://www.health.gov.lk/moh_final/english/others.php?spession=17',
       address: 'Angoda, Colombo',
     },
     type: 'resource',
@@ -115,6 +120,8 @@ export const wellbeingContent: ContentItem[] = [
     contact: {
       phone: '+94 21 222 3876',
       email: 'info@viluthu.org',
+      website: 'https://viluthu.org',
+      address: 'Jaffna, Northern Province',
     },
     type: 'resource',
   },

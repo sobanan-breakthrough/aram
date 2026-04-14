@@ -12,6 +12,7 @@ export const sharedContent: ContentItem[] = [
     region: 'national',
     contact: {
       phone: '1990',
+      website: 'https://www.1990.lk',
     },
     type: 'resource',
   },
@@ -51,6 +52,7 @@ export const sharedContent: ContentItem[] = [
     region: 'national',
     contact: {
       phone: '1938',
+      website: 'https://childprotection.gov.lk',
     },
     type: 'resource',
   },
@@ -94,7 +96,9 @@ export const sharedContent: ContentItem[] = [
     tags: ['NGO', 'international', 'livelihood', 'psychosocial', 'Northern Province'],
     region: 'north',
     contact: {
+      phone: '+94 21 222 8310',
       website: 'https://www.zoa.ngo',
+      address: 'Jaffna, Northern Province',
     },
     type: 'resource',
   },
@@ -108,6 +112,9 @@ export const sharedContent: ContentItem[] = [
     bodyTa: 'பிரிவு செயலகம் அரசு சேவைகளுக்கான உங்கள் முக்கிய தொடர்பு புள்ளி. கிடைக்கும் சேவைகள்: பிறப்பு, இறப்பு, திருமண சான்றிதழ்கள், தேசிய அடையாள அட்டைகள், சமுர்தி பதிவு, ஓய்வூதிய விண்ணப்பங்கள், நில தொடர்பான சேவைகள், வணிக பதிவு, சமூக நலத் திட்டங்கள்.',
     tags: ['government', 'services', 'ID card', 'certificates', 'Samurdhi', 'local'],
     region: 'all',
+    contact: {
+      website: 'https://www.pubad.gov.lk/web/index.php?option=com_content&view=article&id=114&Itemid=143&lang=en',
+    },
     type: 'resource',
   },
   {

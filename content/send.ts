@@ -121,6 +121,7 @@ export const sendContent: ContentItem[] = [
     contact: {
       phone: '+94 11 269 4132',
       email: 'info@cpasl.org',
+      website: 'https://cerebralpalsy.lk',
       address: 'Colombo, Sri Lanka',
     },
     type: 'resource',
@@ -135,6 +136,7 @@ export const sendContent: ContentItem[] = [
     region: 'north',
     contact: {
       phone: '+94 21 222 2261',
+      website: 'https://www.health.gov.lk/moh_final/english/hospital.php?spession=Jaffna',
       address: 'Hospital Road, Jaffna',
     },
     type: 'resource',
@@ -149,7 +151,8 @@ export const sendContent: ContentItem[] = [
     region: 'national',
     contact: {
       phone: '+94 11 218 6080',
-      address: 'Colombo',
+      website: 'https://www.socialwelfare.gov.lk',
+      address: 'No. 159, Kirulapone Avenue, Colombo 05',
     },
     type: 'resource',
   },
@@ -161,6 +164,10 @@ export const sendContent: ContentItem[] = [
     bodyTa: 'ஒவ்வொரு வலய கல்வி அலுவலகத்திலும் உள்ளடக்கிய கல்வி பற்றி பள்ளிகள் மற்றும் பெற்றோருக்கு ஆலோசனை வழங்கக்கூடிய சிறப்பு கல்வி பிரிவு உள்ளது. மதிப்பீடுகளை ஏற்பாடு செய்ய, நிபுணர் ஆசிரியர்களுடன் ஒருங்கிணைக்க, பள்ளி போதுமான ஆதரவை வழங்காவிட்டால் மத்தியஸ்தம் செய்ய உதவ முடியும்.',
     tags: ['education', 'government', 'inclusive education', 'schools', 'special education'],
     region: 'all',
+    contact: {
+      website: 'https://moe.gov.lk',
+      phone: '+94 11 278 4811',
+    },
     type: 'resource',
   },
 ];

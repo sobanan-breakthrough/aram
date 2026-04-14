@@ -91,6 +91,7 @@ export default function TechnologyPage() {
               risksTa={pathway.risksTa}
               resourcesEn={pathway.resourcesEn}
               resourcesTa={pathway.resourcesTa}
+              resourceLinks={pathway.resourceLinks}
             />
           ))}
         </div>

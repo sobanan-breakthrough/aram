@@ -21,6 +21,7 @@ interface PathwayCardProps {
   risksTa: string[];
   resourcesEn: string[];
   resourcesTa: string[];
+  resourceLinks?: string[];
 }
 
 export default function PathwayCard({
@@ -39,6 +40,7 @@ export default function PathwayCard({
   risksTa,
   resourcesEn,
   resourcesTa,
+  resourceLinks,
 }: PathwayCardProps) {
   const { locale } = useLocale();
   const [expanded, setExpanded] = useState(false);
@@ -123,11 +125,25 @@ export default function PathwayCard({
               {locale === 'en' ? 'Resources' : 'வளங்கள்'}
             </h4>
             <ul className="space-y-1">
-              {resources.map((res, i) => (
-                <li key={i} className="text-xs text-info">
-                  {res}
-                </li>
-              ))}
+              {resources.map((res, i) => {
+                const link = resourceLinks?.[i];
+                return (
+                  <li key={i} className="text-xs text-info">
+                    {link ? (
+                      <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        {res}
+                      </a>
+                    ) : (
+                      res
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

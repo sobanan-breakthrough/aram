@@ -33,6 +33,7 @@ export interface PathwayItem {
   risksTa: string[];
   resourcesEn: string[];
   resourcesTa: string[];
+  resourceLinks?: string[];
 }
 
 export type Pillar = 'wellbeing' | 'send' | 'health' | 'technology' | 'community' | 'education' | 'diaspora';
