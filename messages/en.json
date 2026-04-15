@@ -44,7 +44,19 @@
     "technology": "Technology",
     "community": "Community",
     "education": "Education",
-    "diaspora": "Diaspora"
+    "diaspora": "Diaspora",
+    "assistant": "Ask Aram"
+  },
+  "assistant": {
+    "title": "Ask Aram",
+    "subtitle": "Your bilingual guide to resources and support",
+    "placeholder": "Ask anything in English or Tamil...",
+    "send": "Send",
+    "newChat": "New chat",
+    "trySuggestions": "Try asking:",
+    "disclaimer": "This assistant helps you find resources and answers. It is not a substitute for medical, legal, or professional advice. If you are in crisis, call Sumithrayo on +94 11 268 2535 (24/7) or dial 1990 for emergencies.",
+    "error": "Something went wrong. Please try again.",
+    "notConfigured": "The assistant is not configured yet."
   },
   "wellbeing": {
     "title": "Wellbeing",

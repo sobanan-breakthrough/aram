@@ -14,6 +14,7 @@ import {
   GraduationCap,
   Globe,
   ArrowRight,
+  Sparkles,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -101,6 +102,28 @@ export default function HomePage() {
           <PillarCard key={pillar.href} {...pillar} />
         ))}
       </div>
+
+      {/* Ask Aram — AI assistant callout */}
+      <Link
+        href="/assistant"
+        className="flex items-center justify-between rounded-xl bg-gradient-to-r from-primary to-primary-dark text-white p-4 hover:opacity-90 transition-opacity shadow-sm"
+        aria-label={locale === 'en' ? 'Ask Aram — AI assistant' : 'அறத்திடம் கேளுங்கள் — AI உதவியாளர்'}
+      >
+        <div className="flex items-center gap-3">
+          <Sparkles className="h-5 w-5" aria-hidden="true" />
+          <div>
+            <p className="text-sm font-semibold">
+              {locale === 'en' ? 'Ask Aram' : 'அறத்திடம் கேளுங்கள்'}
+            </p>
+            <p className="text-xs opacity-90 mt-0.5">
+              {locale === 'en'
+                ? 'Your bilingual AI guide'
+                : 'உங்கள் இரு மொழி AI வழிகாட்டி'}
+            </p>
+          </div>
+        </div>
+        <ArrowRight className="h-4 w-4" aria-hidden="true" />
+      </Link>
 
       {/* Today's Resource */}
       <div>
