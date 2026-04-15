@@ -26,17 +26,17 @@ export default function PillarCard({
   return (
     <Link
       href={href}
-      className="flex flex-col items-start gap-2 rounded-xl bg-surface border border-border p-4 hover:border-primary/30 hover:shadow-sm transition-all active:scale-[0.98]"
+      className="group flex flex-col gap-2.5 rounded-xl bg-surface border border-border p-3.5 hover:border-primary/40 hover:shadow-sm active:scale-[0.98] transition-all min-h-[120px]"
       aria-label={locale === 'en' ? titleEn : titleTa}
     >
-      <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10">
-        <Icon className="h-5 w-5 text-primary" aria-hidden="true" />
+      <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-primary/10 group-hover:bg-primary/15 transition-colors">
+        <Icon className="h-[18px] w-[18px] text-primary" aria-hidden="true" strokeWidth={2.25} />
       </div>
-      <div>
-        <h3 className="text-sm font-semibold text-text-primary leading-snug">
+      <div className="flex-1">
+        <h3 className="text-sm font-semibold text-text-primary leading-tight">
           {locale === 'en' ? titleEn : titleTa}
         </h3>
-        <p className="text-xs text-text-secondary mt-0.5 leading-relaxed">
+        <p className="text-[13px] text-text-secondary mt-1 leading-snug">
           {locale === 'en' ? descriptionEn : descriptionTa}
         </p>
       </div>

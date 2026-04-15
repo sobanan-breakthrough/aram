@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useId } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 interface AccordionSectionProps {
@@ -11,24 +11,29 @@ interface AccordionSectionProps {
 
 export default function AccordionSection({ title, children, defaultOpen = false }: AccordionSectionProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
+  const contentId = useId();
 
   return (
-    <div className="border border-border rounded-xl overflow-hidden">
+    <div className="rounded-xl border border-border bg-surface overflow-hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full px-4 py-3.5 text-left bg-surface hover:bg-background transition-colors"
+        className="flex items-center justify-between w-full px-4 py-3.5 text-left hover:bg-background transition-colors"
         aria-expanded={isOpen}
+        aria-controls={contentId}
       >
-        <span className="text-sm font-semibold text-text-primary pr-2">{title}</span>
+        <span className="text-[15px] font-semibold text-text-primary pr-3 leading-snug">{title}</span>
         <ChevronDown
-          className={`h-4 w-4 text-text-secondary flex-shrink-0 transition-transform ${
+          className={`h-5 w-5 text-text-secondary flex-shrink-0 transition-transform ${
             isOpen ? 'rotate-180' : ''
           }`}
           aria-hidden="true"
         />
       </button>
       {isOpen && (
-        <div className="px-4 pb-4 pt-1 border-t border-border">
+        <div
+          id={contentId}
+          className="px-4 pb-4 pt-1 border-t border-border"
+        >
           {children}
         </div>
       )}

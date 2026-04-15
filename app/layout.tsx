@@ -4,8 +4,10 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { LocaleProvider } from '@/lib/locale-context';
 import TopBar from '@/components/TopBar';
+import TopTabNav from '@/components/TopTabNav';
 import BottomNav from '@/components/BottomNav';
 import AssistantFAB from '@/components/AssistantFAB';
+import SkipLink from '@/components/SkipLink';
 import './globals.css';
 
 const inter = Inter({
@@ -37,6 +39,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
+  viewportFit: 'cover',
 };
 
 export default async function RootLayout({
@@ -55,8 +58,13 @@ export default async function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-text-primary antialiased">
         <NextIntlClientProvider messages={messages}>
           <LocaleProvider>
+            <SkipLink />
             <TopBar />
-            <main className="flex-1 pb-20 px-4 py-4 max-w-lg mx-auto w-full">
+            <TopTabNav />
+            <main
+              id="main-content"
+              className="flex-1 px-4 pt-4 pb-24 md:pb-8 md:pt-6 w-full max-w-2xl md:max-w-3xl lg:max-w-5xl mx-auto"
+            >
               {children}
             </main>
             <AssistantFAB />

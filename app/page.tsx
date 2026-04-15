@@ -82,37 +82,34 @@ export default function HomePage() {
   const todaysResource = getRandomResource();
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
       {/* Bilingual welcome — intentionally both languages shown */}
-      <div className="text-center py-4">
-        <h1 className="text-2xl font-bold text-primary">Welcome to Aram</h1>
-        <h2 className="text-xl font-bold text-primary font-tamil mt-1">
+      <header className="text-center py-2 sm:py-4">
+        <h1 className="text-2xl sm:text-3xl font-bold text-primary leading-tight">
+          Welcome to Aram
+        </h1>
+        <p className="text-xl sm:text-2xl font-bold text-primary font-tamil mt-0.5 leading-tight">
           அறத்திற்கு வரவேற்கிறோம்
-        </h2>
-        <p className="text-sm text-text-secondary mt-2 max-w-xs mx-auto">
+        </p>
+        <p className="text-sm sm:text-base text-text-secondary mt-3 max-w-md mx-auto leading-relaxed">
           {locale === 'en'
             ? 'Resources for stronger communities. Built with you, not for you.'
             : 'வலுவான சமூகங்களுக்கான வளங்கள். உங்களுக்காக அல்ல, உங்களுடன் கட்டப்பட்டது.'}
         </p>
-      </div>
+      </header>
 
-      {/* Pillar grid */}
-      <div className="grid grid-cols-2 gap-3">
-        {pillars.map(pillar => (
-          <PillarCard key={pillar.href} {...pillar} />
-        ))}
-      </div>
-
-      {/* Ask Aram — AI assistant callout */}
+      {/* Ask Aram — AI assistant callout (moved above pillars for prominence) */}
       <Link
         href="/assistant"
-        className="flex items-center justify-between rounded-xl bg-gradient-to-r from-primary to-primary-dark text-white p-4 hover:opacity-90 transition-opacity shadow-sm"
+        className="flex items-center justify-between rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white p-4 sm:p-5 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all shadow-sm"
         aria-label={locale === 'en' ? 'Ask Aram — AI assistant' : 'அறத்திடம் கேளுங்கள் — AI உதவியாளர்'}
       >
         <div className="flex items-center gap-3">
-          <Sparkles className="h-5 w-5" aria-hidden="true" />
+          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white/15 flex-shrink-0">
+            <Sparkles className="h-5 w-5" aria-hidden="true" />
+          </div>
           <div>
-            <p className="text-sm font-semibold">
+            <p className="text-base font-semibold leading-tight">
               {locale === 'en' ? 'Ask Aram' : 'அறத்திடம் கேளுங்கள்'}
             </p>
             <p className="text-xs opacity-90 mt-0.5">
@@ -122,16 +119,28 @@ export default function HomePage() {
             </p>
           </div>
         </div>
-        <ArrowRight className="h-4 w-4" aria-hidden="true" />
+        <ArrowRight className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
       </Link>
 
+      {/* Pillar grid — responsive: 2 cols mobile, 3 cols tablet, 4 cols desktop */}
+      <section aria-label={locale === 'en' ? 'Resource pillars' : 'வளத் தூண்கள்'}>
+        <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">
+          {locale === 'en' ? 'Explore resources' : 'வளங்களை ஆராயுங்கள்'}
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          {pillars.map(pillar => (
+            <PillarCard key={pillar.href} {...pillar} />
+          ))}
+        </div>
+      </section>
+
       {/* Today's Resource */}
-      <div>
-        <h3 className="text-sm font-semibold text-text-primary mb-2">
+      <section>
+        <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">
           {locale === 'en' ? "Today's Resource" : 'இன்றைய வளம்'}
-        </h3>
+        </h2>
         <ResourceCard item={todaysResource} />
-      </div>
+      </section>
 
       {/* Diaspora callout */}
       <Link

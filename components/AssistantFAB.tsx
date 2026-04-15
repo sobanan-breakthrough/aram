@@ -15,11 +15,12 @@ export default function AssistantFAB() {
   return (
     <Link
       href="/assistant"
-      aria-label={locale === 'en' ? 'Open assistant' : 'உதவியாளரை திற'}
-      className="fixed bottom-24 right-4 z-40 flex items-center gap-2 rounded-full bg-primary text-white shadow-lg px-4 py-3 hover:bg-primary-dark transition-all active:scale-95 no-print"
+      aria-label={locale === 'en' ? 'Open Ask Aram assistant' : 'அறம் உதவியாளரை திற'}
+      className="fixed z-40 bottom-[5.5rem] md:bottom-6 right-4 md:right-6 inline-flex w-auto items-center gap-2 rounded-full bg-primary text-white shadow-lg hover:shadow-xl hover:bg-primary-dark active:scale-95 transition-all no-print px-4 py-3"
+      style={{ width: 'auto' }}
     >
-      <Sparkles className="h-4 w-4" aria-hidden="true" />
-      <span className="text-sm font-semibold">
+      <Sparkles className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
+      <span className="text-sm font-semibold whitespace-nowrap">
         {locale === 'en' ? 'Ask Aram' : 'அறம்'}
       </span>
     </Link>

@@ -9,10 +9,10 @@ export default function LanguageToggle() {
   return (
     <button
       onClick={toggleLocale}
-      className="flex items-center gap-1.5 rounded-full bg-surface px-3 py-1.5 text-sm font-medium text-text-primary border border-border hover:bg-background transition-colors"
+      className="inline-flex items-center gap-1.5 rounded-full bg-background px-3 h-10 text-sm font-medium text-text-primary border border-border hover:border-primary/30 hover:bg-surface transition-colors"
       aria-label={locale === 'en' ? 'Switch to Tamil' : 'ஆங்கிலத்திற்கு மாறு'}
     >
-      <Languages className="h-4 w-4" aria-hidden="true" />
+      <Languages className="h-4 w-4 text-text-secondary" aria-hidden="true" />
       <span className="font-semibold">{locale === 'en' ? 'த' : 'EN'}</span>
     </button>
   );
