@@ -191,7 +191,7 @@ export default function AssistantPage() {
   };
 
   return (
-    <div className="flex flex-col h-[calc(100dvh-8.5rem)] md:h-[calc(100dvh-7rem)] -mx-4 sm:mx-0">
+    <div className="flex flex-col h-[calc(100dvh-10rem)] md:h-[calc(100dvh-8.5rem)] -mx-4 sm:mx-0">
       {/* Header */}
       <div className="flex items-start justify-between px-4 sm:px-0 mb-3 flex-shrink-0">
         <div className="flex items-start gap-3 min-w-0">
@@ -323,10 +323,10 @@ export default function AssistantPage() {
         </div>
       )}
 
-      {/* Input — sticky at bottom */}
+      {/* Input — prominent at bottom */}
       <form
         onSubmit={handleSubmit}
-        className="flex items-end gap-2 border-t border-border bg-background pt-3 px-4 sm:px-0 flex-shrink-0"
+        className="flex items-end gap-2 border-t border-border bg-surface pt-3 pb-2 px-4 sm:px-0 flex-shrink-0 shadow-[0_-2px_8px_rgba(0,0,0,0.04)]"
       >
         <VoiceButton
           onTranscript={handleVoiceTranscript}

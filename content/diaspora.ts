@@ -112,4 +112,36 @@ export const diasporaContent: ContentItem[] = [
     region: 'diaspora',
     type: 'explainer',
   },
+
+  // === ADDITIONAL DIASPORA CONTENT ===
+  {
+    id: 'dia-second-gen',
+    titleEn: 'Second-Generation Identity — Growing Up Between Two Worlds',
+    titleTa: 'இரண்டாம் தலைமுறை அடையாளம் — இரண்டு உலகங்களுக்கு இடையே வளர்தல்',
+    bodyEn: 'If you grew up in the UK, Canada, Australia, or Europe as a Tamil — you are navigating something complex. You may feel "too Tamil" at school and "too Western" at family gatherings. You may struggle with expectations from parents who experienced war and displacement, while living in a society that does not understand that history. This is not a flaw — it is the reality of the diaspora experience. You belong to both worlds, not neither. What helps: connect with other second-generation Tamils (online communities, university Tamil societies), learn about your family\'s history at your own pace, explore Tamil culture on your own terms (you do not have to do everything the "traditional" way), talk to your parents about their experiences when you are both ready. If you are a parent of second-generation children: share your story when they ask, do not pressure them to be "more Tamil" — let them find their own relationship with the culture, and remember that adapting to a new country does not mean abandoning your roots.',
+    bodyTa: 'UK, கனடா, ஆஸ்திரேலியா அல்லது ஐரோப்பாவில் தமிழராக வளர்ந்தீர்கள் என்றால் — நீங்கள் சிக்கலான ஒன்றை வழிசெலுத்துகிறீர்கள். பள்ளியில் "மிகவும் தமிழ்" என்றும் குடும்ப கூட்டங்களில் "மிகவும் மேற்கத்திய" என்றும் உணரலாம். போர் மற்றும் இடப்பெயர்வை அனுபவித்த பெற்றோரின் எதிர்பார்ப்புகளுடன் போராடலாம், அந்த வரலாற்றைப் புரிந்துகொள்ளாத சமூகத்தில் வாழும்போது. இது குறைபாடு அல்ல — புலம்பெயர் அனுபவத்தின் யதார்த்தம். நீங்கள் இரண்டு உலகங்களுக்கும் சொந்தம், எதற்கும் சொந்தமில்லை என்பதல்ல.',
+    tags: ['second generation', 'identity', 'youth', 'diaspora', 'belonging', 'cultural'],
+    region: 'diaspora',
+    type: 'explainer',
+  },
+  {
+    id: 'dia-org-directory',
+    titleEn: 'Tamil Diaspora Organisations by Country',
+    titleTa: 'நாடு வாரியாக தமிழ் புலம்பெயர் நிறுவனங்கள்',
+    bodyEn: 'Connecting with Tamil diaspora organisations can help you stay engaged with the community and find support. Key organisations by country: **United Kingdom**: British Tamil Forum, Tamil Guardian (media), Tamil Education Foundation. **Canada**: Canadian Tamil Congress, Tamil Canadian Centre (Toronto), Tamil Cultural Association. **Australia**: Australian Tamil Congress, Tamil Youth Organisation. **France**: Maison du Tamil (Paris). **Germany**: Tamil Cultural Forum Germany. **Switzerland**: Swiss Tamil Forum. These organisations typically offer: cultural events, language classes for children, advocacy, emergency support networks, and connections to organisations in Sri Lanka. Many also run scholarship programmes for students in the North and East. Search for your local Tamil association — most areas with a Tamil population will have one.',
+    bodyTa: 'தமிழ் புலம்பெயர் நிறுவனங்களுடன் இணைவது சமூகத்துடன் தொடர்பில் இருக்கவும் ஆதரவைக் கண்டறியவும் உதவும். நாடு வாரியாக முக்கிய நிறுவனங்கள்: **இங்கிலாந்து**: British Tamil Forum, Tamil Guardian. **கனடா**: Canadian Tamil Congress, Tamil Canadian Centre. **ஆஸ்திரேலியா**: Australian Tamil Congress. **பிரான்ஸ்**: Maison du Tamil. **ஜெர்மனி**: Tamil Cultural Forum Germany. **சுவிட்சர்லாந்து**: Swiss Tamil Forum. இந்த நிறுவனங்கள் வழக்கமாக வழங்குவது: கலாச்சார நிகழ்வுகள், குழந்தைகளுக்கான மொழி வகுப்புகள், வாதாடல், அவசர ஆதரவு நெட்வொர்க்குகள், இலங்கையில் நிறுவனங்களுடன் தொடர்புகள்.',
+    tags: ['organisations', 'diaspora', 'UK', 'Canada', 'Australia', 'directory', 'community'],
+    region: 'diaspora',
+    type: 'resource',
+  },
+  {
+    id: 'dia-raising-tamil',
+    titleEn: 'Raising Tamil Children Abroad',
+    titleTa: 'வெளிநாட்டில் தமிழ் குழந்தைகளை வளர்த்தல்',
+    bodyEn: 'Keeping Tamil language and culture alive in the next generation is a common concern for diaspora families. What works: 1) Speak Tamil at home consistently — even if children respond in English, they are absorbing the language. 2) Video-call relatives in Sri Lanka regularly — real conversation builds language naturally. 3) Tamil Saturday schools exist in most major diaspora cities — they teach reading, writing, music, and dance. 4) Cook Tamil food together — cooking is culture. 5) Celebrate Pongal, Thai Pongal, and other festivals — even a small celebration at home matters. 6) Share age-appropriate family stories — where you came from, why you left, what you hope for. 7) Do not force it — children who feel pressured may resist. Make Tamil identity feel like a gift, not a duty. 8) Connect them with Tamil peers — Tamil youth groups and community events build belonging.',
+    bodyTa: 'அடுத்த தலைமுறையில் தமிழ் மொழி மற்றும் கலாச்சாரத்தை உயிர்ப்பிப்பது புலம்பெயர் குடும்பங்களுக்கு பொதுவான கவலை. வேலை செய்வது: 1) வீட்டில் தொடர்ந்து தமிழ் பேசுங்கள் — குழந்தைகள் ஆங்கிலத்தில் பதிலளித்தாலும், மொழியை உள்வாங்குகிறார்கள். 2) இலங்கையில் உள்ள உறவினர்களுக்கு தொடர்ந்து வீடியோ அழைப்பு செய்யுங்கள். 3) பெரும்பாலான புலம்பெயர் நகரங்களில் தமிழ் சனிக்கிழமை பள்ளிகள் உள்ளன. 4) ஒன்றாக தமிழ் உணவு சமையுங்கள் — சமையல் கலாச்சாரம். 5) பொங்கல் மற்றும் பிற பண்டிகைகளை கொண்டாடுங்கள். 6) வயதுக்கு ஏற்ற குடும்ப கதைகளைப் பகிருங்கள். 7) கட்டாயப்படுத்தாதீர்கள் — தமிழ் அடையாளம் பரிசாக உணரவும், கடமையாக அல்ல.',
+    tags: ['parenting', 'children', 'language', 'culture', 'diaspora', 'identity'],
+    region: 'diaspora',
+    type: 'guide',
+  },
 ];

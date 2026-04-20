@@ -118,4 +118,40 @@ export const educationContent: ContentItem[] = [
     region: 'all',
     type: 'guide',
   },
+
+  // === ADDITIONAL EDUCATION CONTENT ===
+  {
+    id: 'edu-exam-tips',
+    titleEn: 'Study Tips for O/L and A/L Students',
+    titleTa: 'O/L மற்றும் A/L மாணவர்களுக்கான படிப்பு குறிப்புகள்',
+    bodyEn: 'Smart study habits matter more than hours spent. Effective strategies: 1) Study in short focused blocks (25 minutes study, 5 minutes break — the Pomodoro technique). 2) Test yourself rather than just re-reading notes — try to recall information from memory. 3) Study the hardest subject first when your mind is freshest. 4) Create summary sheets for each topic — condensing information helps you remember. 5) Study past exam papers — patterns repeat. Your school library or teacher may have copies. 6) Form a small study group (2–4 students) to discuss and quiz each other. 7) Sleep well the night before an exam — your brain consolidates memories during sleep. 8) During the exam: read ALL questions first, start with the ones you know, manage your time (divide total time by number of questions). Free resources: Khan Academy Tamil for maths and science revision, YouTube O/L and A/L channels.',
+    bodyTa: 'புத்திசாலித்தனமான படிப்பு பழக்கங்கள் செலவழிக்கும் மணி நேரங்களை விட முக்கியம். பயனுள்ள உத்திகள்: 1) குறுகிய கவனமான தொகுதிகளில் படியுங்கள் (25 நிமிட படிப்பு, 5 நிமிட இடைவெளி). 2) குறிப்புகளை மீண்டும் படிப்பதை விட உங்களை நீங்களே சோதியுங்கள். 3) மனம் புத்துணர்வாக இருக்கும்போது கடினமான பாடத்தை முதலில் படியுங்கள். 4) ஒவ்வொரு தலைப்புக்கும் சுருக்க தாள்களை உருவாக்குங்கள். 5) கடந்த தேர்வு தாள்களை படியுங்கள். 6) விவாதிக்க சிறிய படிப்பு குழுவை உருவாக்குங்கள். 7) தேர்வுக்கு முந்தைய இரவு நன்றாக தூங்குங்கள். 8) தேர்வின் போது: முதலில் எல்லா கேள்விகளையும் படியுங்கள், நீங்கள் அறிந்தவற்றுடன் தொடங்குங்கள்.',
+    tags: ['study tips', 'O/L', 'A/L', 'exams', 'students', 'secondary'],
+    region: 'all',
+    type: 'guide',
+  },
+  {
+    id: 'edu-teacher-support',
+    titleEn: 'Resources for Teachers — Supporting Every Student',
+    titleTa: 'ஆசிரியர்களுக்கான வளங்கள் — ஒவ்வொரு மாணவரையும் ஆதரித்தல்',
+    bodyEn: 'Teaching in post-conflict communities comes with unique challenges. Many students carry trauma, some have gaps in their education, others have unidentified learning difficulties. Practical approaches: 1) Start each day with a calm, predictable routine — this helps anxious students feel safe. 2) Use multiple ways to teach the same concept (visual, verbal, hands-on) — not all students learn the same way. 3) Give clear, simple instructions — one step at a time. 4) Notice behavioural changes — a child who suddenly becomes withdrawn or aggressive may be struggling with something at home. 5) Build relationships with parents — a brief positive message home goes a long way. 6) Take care of your own wellbeing — you cannot support students if you are burning out. The SEND section of this app has specific guidance on inclusive classroom practices.',
+    bodyTa: 'மோதலுக்குப் பிந்தைய சமூகங்களில் கற்பித்தல் தனித்துவமான சவால்களுடன் வருகிறது. பல மாணவர்கள் அதிர்ச்சியை சுமக்கிறார்கள், சிலருக்கு கல்வியில் இடைவெளிகள் உள்ளன, மற்றவர்களுக்கு அடையாளம் காணப்படாத கற்றல் சிரமங்கள் உள்ளன. நடைமுறை அணுகுமுறைகள்: 1) ஒவ்வொரு நாளும் அமைதியான, கணிக்கக்கூடிய வழக்கத்துடன் தொடங்குங்கள். 2) ஒரே கருத்தை கற்பிக்க பல வழிகளை பயன்படுத்துங்கள் (காட்சி, சொல், நடைமுறை). 3) தெளிவான, எளிய அறிவுறுத்தல்கள் கொடுங்கள். 4) நடத்தை மாற்றங்களை கவனியுங்கள். 5) பெற்றோருடன் உறவுகளை கட்டமையுங்கள். 6) உங்கள் சொந்த நல்வாழ்வை கவனியுங்கள்.',
+    tags: ['teachers', 'training', 'inclusive education', 'classroom', 'trauma-informed'],
+    region: 'all',
+    type: 'guide',
+    trainerResource: true,
+  },
+  {
+    id: 'edu-digital-learning',
+    titleEn: 'Using Your Phone for Education',
+    titleTa: 'கல்விக்கு உங்கள் தொலைபேசியைப் பயன்படுத்துதல்',
+    bodyEn: 'Your smartphone is a powerful learning tool. Here is how to use it effectively: 1) Download Khan Academy — it has free Tamil-language courses for maths, science, and computing from primary through A/L level. Works offline once downloaded. 2) Use YouTube as a tutor — search for your specific topic in Tamil (e.g., "O/L chemistry Tamil" or "A/L physics Tamil"). Many teachers upload full lesson series. 3) Google Translate can help you read English-language textbooks — point your camera at the text for instant translation. 4) Duolingo for learning English — 10 minutes a day builds language skills gradually. 5) Voice typing lets you take notes quickly — tap the microphone on your keyboard. 6) Download educational apps on WiFi, then use them offline when data is expensive. Pro tip: set a daily learning alarm — consistency is what creates results.',
+    bodyTa: 'உங்கள் ஸ்மார்ட்ஃபோன் சக்திவாய்ந்த கற்றல் கருவி. பயனுள்ள முறையில் பயன்படுத்துவது: 1) Khan Academy பதிவிறக்கம் செய்யுங்கள் — ஆரம்ப முதல் A/L வரை கணிதம், அறிவியல், கணினி ஆகியவற்றில் இலவச தமிழ் படிப்புகள். பதிவிறக்கம் செய்தபின் ஆஃப்லைனில் வேலை செய்யும். 2) YouTube-ஐ ஆசிரியராக பயன்படுத்துங்கள் — உங்கள் குறிப்பிட்ட தலைப்பை தமிழில் தேடுங்கள். 3) Google Translate ஆங்கில பாடப்புத்தகங்களை படிக்க உதவும் — உடனடி மொழிபெயர்ப்புக்கு கேமராவை உரையை நோக்கி காட்டுங்கள். 4) ஆங்கிலம் கற்க Duolingo — நாளுக்கு 10 நிமிடங்கள் படிப்படியாக மொழி திறன்களை வளர்க்கும். 5) விரைவாக குறிப்புகள் எடுக்க குரல் தட்டச்சு.',
+    tags: ['smartphone', 'digital learning', 'apps', 'Khan Academy', 'YouTube', 'students'],
+    region: 'all',
+    type: 'guide',
+    contact: {
+      website: 'https://ta.khanacademy.org',
+    },
+  },
 ];

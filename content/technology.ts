@@ -98,6 +98,38 @@ export const technologyContent: ContentItem[] = [
     },
     type: 'explainer',
   },
+
+  // === ADDITIONAL TECHNOLOGY CONTENT ===
+  {
+    id: 'tech-backup',
+    titleEn: 'Backing Up Your Phone — Protect What Matters',
+    titleTa: 'உங்கள் தொலைபேசியை காப்புப்பிரதி எடுத்தல் — முக்கியமானவற்றைப் பாதுகாங்கள்',
+    bodyEn: 'Phones get lost, stolen, broken, or flooded. If you have not backed up, your photos, contacts, and messages are gone forever. How to back up (Android): Go to Settings > Google > Backup > turn on "Back up to Google Drive". This automatically saves your contacts, app data, call history, and settings to Google\'s cloud — free up to 15GB. For photos: open Google Photos > tap your profile > Photos settings > Backup > turn on. Back up over WiFi to avoid using mobile data. For WhatsApp: open WhatsApp > Settings > Chats > Chat backup > set it to back up daily to Google Drive. How often: set automatic daily backups over WiFi. Check once a month that backups are working. This takes 5 minutes to set up and could save you from losing years of memories and important contacts.',
+    bodyTa: 'தொலைபேசிகள் தொலைந்து, திருடப்பட்டு, உடைந்து அல்லது வெள்ளத்தில் நனைந்து போகலாம். காப்புப்பிரதி எடுக்கவில்லை என்றால், உங்கள் புகைப்படங்கள், தொடர்புகள், செய்திகள் என்றென்றைக்கும் போய்விடும். காப்புப்பிரதி எடுப்பது (Android): Settings > Google > Backup > "Back up to Google Drive" இயக்குங்கள். Google-இன் கிளவுட்டில் 15GB வரை இலவசம். புகைப்படங்களுக்கு: Google Photos > Backup இயக்குங்கள். WhatsApp-க்கு: Settings > Chats > Chat backup > தினசரி Google Drive-க்கு காப்புப்பிரதி அமையுங்கள். WiFi மூலம் காப்புப்பிரதி எடுத்து மொபைல் தரவு பயன்பாட்டைத் தவிர்க்கவும்.',
+    tags: ['backup', 'data safety', 'Google Drive', 'photos', 'WhatsApp', 'practical'],
+    region: 'all',
+    type: 'guide',
+  },
+  {
+    id: 'tech-social-safety',
+    titleEn: 'Social Media Safety — Protect Yourself and Your Family',
+    titleTa: 'சமூக ஊடக பாதுகாப்பு — உங்களையும் உங்கள் குடும்பத்தையும் பாதுகாங்கள்',
+    bodyEn: 'Social media connects communities but also carries risks. Safety tips: 1) Set your profiles to private (Facebook: Settings > Privacy > Who can see your posts > Friends only). 2) Do not share your home address, phone number, or daily schedule publicly. 3) Be careful with photos of children — never post photos that show school uniforms with the school name visible, or photos that reveal your home location. 4) If someone you do not know sends a friend request, check their profile carefully before accepting. Fake profiles often have few photos and recent creation dates. 5) If you experience online harassment, block the person, take screenshots as evidence, and report to the platform. 6) Teach children that not everything online is true, and that they should tell a trusted adult if someone online makes them uncomfortable. 7) Do not share unverified news or rumours — it can cause real harm.',
+    bodyTa: 'சமூக ஊடகம் சமூகங்களை இணைக்கிறது ஆனால் அபாயங்களையும் சுமக்கிறது. பாதுகாப்பு குறிப்புகள்: 1) உங்கள் சுயவிவரங்களை தனிப்பட்டதாக அமையுங்கள். 2) வீட்டு முகவரி, தொலைபேசி எண், அல்லது அன்றாட அட்டவணையை பகிரக்கூடாது. 3) குழந்தைகளின் புகைப்படங்களில் கவனமாக இருங்கள் — பள்ளி சீருடைகள் அல்லது வீட்டு இருப்பிடம் தெரியும் புகைப்படங்களை ஒருபோதும் பதிவேற்றாதீர்கள். 4) அறியாத நபர் நண்பர் கோரிக்கை அனுப்பினால், ஏற்பதற்கு முன் கவனமாக சரிபார்க்கவும். 5) ஆன்லைன் தொந்தரவு ஏற்பட்டால், தடை செய்யுங்கள், ஸ்கிரீன்ஷாட் எடுங்கள், புகாரளியுங்கள்.',
+    tags: ['social media', 'safety', 'privacy', 'children', 'Facebook', 'harassment'],
+    region: 'all',
+    type: 'guide',
+  },
+  {
+    id: 'tech-digital-payments',
+    titleEn: 'Digital Payments in Sri Lanka',
+    titleTa: 'இலங்கையில் டிஜிட்டல் கொடுப்பனவுகள்',
+    bodyEn: 'Digital payments save time and provide a record of transactions. Options in Sri Lanka: 1) FriMi (by Nations Trust Bank) — link to any bank account, pay bills, transfer money, scan QR codes at shops. Download from Play Store, register with NIC. 2) eZ Cash (by Dialog) — works from any phone (even basic phones). Dial #111# to register. Send money, pay bills, top up phones. No bank account needed. 3) LankaQR — scan QR codes at participating shops to pay from your bank app. 4) Bank apps — most Sri Lankan banks have mobile apps for transfers and bill payments (Commercial Bank, HNB, BOC, People\'s Bank). Setup: you need your NIC and a phone number linked to your bank. Start small — try paying a utility bill digitally to get comfortable, then expand to transfers and shopping.',
+    bodyTa: 'டிஜிட்டல் கொடுப்பனவுகள் நேரத்தை மிச்சப்படுத்துகின்றன, பரிவர்த்தனைகளின் பதிவை வழங்குகின்றன. இலங்கையில் விருப்பங்கள்: 1) FriMi (Nations Trust Bank) — எந்த வங்கி கணக்கிலும் இணையுங்கள், பில் செலுத்துங்கள், பணம் மாற்றுங்கள், கடைகளில் QR குறியீடுகளை ஸ்கேன் செய்யுங்கள். 2) eZ Cash (Dialog) — எந்த தொலைபேசியிலும் வேலை செய்யும் (அடிப்படை தொலைபேசிகளிலும் கூட). #111# டயல் செய்து பதிவு செய்யுங்கள். வங்கி கணக்கு தேவையில்லை. 3) LankaQR — பங்கேற்கும் கடைகளில் QR குறியீடுகளை ஸ்கேன் செய்யுங்கள். 4) வங்கி செயலிகள் — பெரும்பாலான இலங்கை வங்கிகளுக்கு மொபைல் செயலிகள் உள்ளன.',
+    tags: ['digital payments', 'FriMi', 'eZ Cash', 'mobile money', 'banking', 'QR'],
+    region: 'all',
+    type: 'explainer',
+  },
 ];
 
 export const technologyPathways: PathwayItem[] = [
