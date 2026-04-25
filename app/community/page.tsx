@@ -4,7 +4,8 @@ import { useLocale } from '@/lib/locale-context';
 import AccordionSection from '@/components/AccordionSection';
 import ResourceCard from '@/components/ResourceCard';
 import { communityContent } from '@/content/community';
-import { Users, TrendingUp } from 'lucide-react';
+import { Users, TrendingUp, Megaphone, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function CommunityPage() {
   const { locale } = useLocale();
@@ -85,6 +86,28 @@ export default function CommunityPage() {
             <ResourceCard key={item.id} item={item} />
           ))}
         </div>
+
+        {/* Share your story callout */}
+        <Link
+          href="/share-your-story"
+          className="mt-4 flex items-center justify-between rounded-xl bg-secondary/10 border border-secondary/30 p-4 hover:bg-secondary/15 transition-colors"
+          aria-label={locale === 'en' ? 'Share your own story' : 'உங்கள் சொந்த கதையைப் பகிருங்கள்'}
+        >
+          <div className="flex items-center gap-3">
+            <Megaphone className="h-5 w-5 text-secondary-dark" aria-hidden="true" />
+            <div>
+              <p className="text-sm font-semibold text-text-primary leading-tight">
+                {locale === 'en' ? 'Share your own story' : 'உங்கள் சொந்த கதையைப் பகிருங்கள்'}
+              </p>
+              <p className="text-[12px] text-text-secondary mt-0.5">
+                {locale === 'en'
+                  ? 'Your experience can help someone else'
+                  : 'உங்கள் அனுபவம் வேறொருவருக்கு உதவும்'}
+              </p>
+            </div>
+          </div>
+          <ArrowRight className="h-4 w-4 text-secondary-dark flex-shrink-0" aria-hidden="true" />
+        </Link>
       </div>
     </div>
   );

@@ -15,8 +15,10 @@ import {
   Globe,
   ArrowRight,
   Sparkles,
+  GraduationCap as TrainerIcon,
 } from 'lucide-react';
 import Link from 'next/link';
+import HelpFinder from '@/components/HelpFinder';
 
 const pillars = [
   {
@@ -122,6 +124,9 @@ export default function HomePage() {
         <ArrowRight className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
       </Link>
 
+      {/* Help finder wizard — guided 30-second triage for first-time users */}
+      <HelpFinder />
+
       {/* Pillar grid — responsive: 2 cols mobile, 3 cols tablet, 4 cols desktop */}
       <section aria-label={locale === 'en' ? 'Resource pillars' : 'வளத் தூண்கள்'}>
         <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">
@@ -141,6 +146,28 @@ export default function HomePage() {
         </h2>
         <ResourceCard item={todaysResource} />
       </section>
+
+      {/* For trainers / community workers */}
+      <Link
+        href="/trainer-toolkit"
+        className="flex items-center justify-between rounded-xl bg-info/5 border border-info/20 p-4 hover:bg-info/10 transition-colors"
+        aria-label={locale === 'en' ? 'For trainers and community workers' : 'பயிற்சியாளர்கள் மற்றும் சமூக ஊழியர்களுக்கு'}
+      >
+        <div className="flex items-center gap-3">
+          <TrainerIcon className="h-5 w-5 text-info" aria-hidden="true" />
+          <div>
+            <p className="text-sm font-semibold text-text-primary leading-tight">
+              {locale === 'en' ? 'Trainer Toolkit' : 'பயிற்சியாளர் கருவித்தொகுதி'}
+            </p>
+            <p className="text-xs text-text-secondary mt-0.5">
+              {locale === 'en'
+                ? 'For community health workers, peer supporters, teachers'
+                : 'சமூக சுகாதார ஊழியர்கள், சக ஆதரவாளர்கள், ஆசிரியர்களுக்கு'}
+            </p>
+          </div>
+        </div>
+        <ArrowRight className="h-4 w-4 text-info flex-shrink-0" aria-hidden="true" />
+      </Link>
 
       {/* Diaspora callout */}
       <Link

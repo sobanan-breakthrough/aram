@@ -13,6 +13,7 @@ import {
   GraduationCap,
   Globe,
   Sparkles,
+  GraduationCap as TrainerIcon,
 } from 'lucide-react';
 
 const navItems = [
@@ -24,6 +25,7 @@ const navItems = [
   { href: '/community', icon: Users, labelEn: 'Community', labelTa: 'சமூகம்' },
   { href: '/education', icon: GraduationCap, labelEn: 'Education', labelTa: 'கல்வி' },
   { href: '/diaspora', icon: Globe, labelEn: 'Diaspora', labelTa: 'புலம்பெயர்வு' },
+  { href: '/trainer-toolkit', icon: TrainerIcon, labelEn: 'Trainer Toolkit', labelTa: 'பயிற்சி கருவி' },
   { href: '/assistant', icon: Sparkles, labelEn: 'Ask Aram', labelTa: 'அறம்' },
 ];
 
