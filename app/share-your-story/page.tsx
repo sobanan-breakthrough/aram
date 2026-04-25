@@ -13,7 +13,7 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 
-const SUBMISSION_EMAIL = 'stories@aram-vert.example';
+const SUBMISSION_EMAIL = 'sobanan@aram.org.uk';
 
 type Pillar = 'community' | 'wellbeing' | 'health' | 'education' | 'technology' | 'send' | 'diaspora' | 'other';
 
