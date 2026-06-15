@@ -191,7 +191,7 @@ export default function AssistantPage() {
   };
 
   return (
-    <div className="flex flex-col h-[calc(100dvh-10rem)] md:h-[calc(100dvh-8.5rem)] -mx-4 sm:mx-0">
+    <div className="flex flex-col h-[calc(100dvh-9rem)] md:h-[calc(100dvh-8.5rem)] -mx-4 sm:mx-0">
       {/* Header */}
       <div className="flex items-start justify-between px-4 sm:px-0 mb-3 flex-shrink-0">
         <div className="flex items-start gap-3 min-w-0">

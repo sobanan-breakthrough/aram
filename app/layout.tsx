@@ -66,7 +66,7 @@ export default async function RootLayout({
               <TopTabNav />
               <main
                 id="main-content"
-                className="flex-1 px-4 pt-4 pb-28 md:pb-8 md:pt-6 w-full max-w-2xl md:max-w-3xl lg:max-w-5xl mx-auto"
+                className="flex-1 px-4 pt-4 pb-20 md:pb-8 md:pt-6 w-full max-w-2xl md:max-w-3xl lg:max-w-5xl mx-auto"
               >
                 {children}
               </main>
