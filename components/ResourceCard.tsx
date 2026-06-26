@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import TrainTheTrainerBadge from './TrainTheTrainerBadge';
 import type { ContentItem } from '@/lib/types';
+import { speak, isSpeechSupported, type ActiveSpeech } from '@/lib/speech';
 
 interface ResourceCardProps {
   item: ContentItem;
@@ -28,16 +29,13 @@ export default function ResourceCard({ item }: ResourceCardProps) {
   const [speechSupported, setSpeechSupported] = useState(false);
   const [speaking, setSpeaking] = useState(false);
   const [shareJustCopied, setShareJustCopied] = useState(false);
-  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+  const activeSpeechRef = useRef<ActiveSpeech | null>(null);
 
   useEffect(() => {
     setShareSupported(typeof navigator !== 'undefined' && 'share' in navigator);
-    setSpeechSupported(typeof window !== 'undefined' && 'speechSynthesis' in window);
+    setSpeechSupported(isSpeechSupported());
     return () => {
-      // Stop any in-flight speech when card unmounts
-      if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-      }
+      activeSpeechRef.current?.stop();
     };
   }, []);
 
@@ -73,22 +71,29 @@ export default function ResourceCard({ item }: ResourceCardProps) {
     }
   };
 
-  const handleSpeak = () => {
+  const handleSpeak = async () => {
     if (!speechSupported) return;
     if (speaking) {
-      window.speechSynthesis.cancel();
+      activeSpeechRef.current?.stop();
+      activeSpeechRef.current = null;
       setSpeaking(false);
       return;
     }
-    const utter = new SpeechSynthesisUtterance(`${title}. ${body}`);
-    utter.lang = locale === 'ta' ? 'ta-LK' : 'en-US';
-    utter.rate = 0.95;
-    utter.onend = () => setSpeaking(false);
-    utter.onerror = () => setSpeaking(false);
-    utteranceRef.current = utter;
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(utter);
     setSpeaking(true);
+    const active = await speak({
+      text: `${title}. ${body}`,
+      locale,
+      onStart: () => setSpeaking(true),
+      onEnd: () => {
+        setSpeaking(false);
+        activeSpeechRef.current = null;
+      },
+      onError: () => {
+        setSpeaking(false);
+        activeSpeechRef.current = null;
+      },
+    });
+    activeSpeechRef.current = active;
   };
 
   return (

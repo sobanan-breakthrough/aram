@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, type FormEvent } from 'react';
 import { useLocale } from '@/lib/locale-context';
 import { Send, Sparkles, RotateCcw, AlertTriangle, User, Bot, Volume2, VolumeX } from 'lucide-react';
 import VoiceButton from '@/components/VoiceButton';
+import { speak, isSpeechSupported, type ActiveSpeech } from '@/lib/speech';
 
 type Message = {
   role: 'user' | 'assistant';
@@ -36,11 +37,13 @@ export default function AssistantPage() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
   const interimTextRef = useRef<string>('');
+  const activeSpeechRef = useRef<ActiveSpeech | null>(null);
 
   useEffect(() => {
-    setSpeechSupported(
-      typeof window !== 'undefined' && 'speechSynthesis' in window
-    );
+    setSpeechSupported(isSpeechSupported());
+    return () => {
+      activeSpeechRef.current?.stop();
+    };
   }, []);
 
   const suggestedPrompts = locale === 'en' ? suggestedPromptsEn : suggestedPromptsTa;
@@ -61,18 +64,15 @@ export default function AssistantPage() {
     ta.style.height = `${Math.min(ta.scrollHeight, 160)}px`;
   }, [input]);
 
-  const speakText = (text: string) => {
+  const speakText = async (text: string) => {
     if (!speechEnabled || !speechSupported) return;
-    try {
-      const utter = new SpeechSynthesisUtterance(text);
-      utter.lang = locale === 'ta' ? 'ta-LK' : 'en-US';
-      utter.rate = 1.0;
-      utter.pitch = 1.0;
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(utter);
-    } catch {
-      // silently ignore speech synth errors
-    }
+    activeSpeechRef.current?.stop();
+    activeSpeechRef.current = await speak({
+      text,
+      locale,
+      onEnd: () => { activeSpeechRef.current = null; },
+      onError: () => { activeSpeechRef.current = null; },
+    });
   };
 
   const sendMessage = async (content: string) => {
@@ -176,7 +176,8 @@ export default function AssistantPage() {
 
   const handleReset = () => {
     if (abortControllerRef.current) abortControllerRef.current.abort();
-    if (speechSupported) window.speechSynthesis?.cancel();
+    activeSpeechRef.current?.stop();
+    activeSpeechRef.current = null;
     setMessages([]);
     setInput('');
     interimTextRef.current = '';
@@ -184,8 +185,9 @@ export default function AssistantPage() {
   };
 
   const toggleSpeech = () => {
-    if (speechEnabled && speechSupported) {
-      window.speechSynthesis.cancel();
+    if (speechEnabled) {
+      activeSpeechRef.current?.stop();
+      activeSpeechRef.current = null;
     }
     setSpeechEnabled(v => !v);
   };
