@@ -3,8 +3,9 @@
 import { useLocale } from '@/lib/locale-context';
 import AccordionSection from '@/components/AccordionSection';
 import ResourceCard from '@/components/ResourceCard';
+import PillarHero from '@/components/PillarHero';
 import { communityContent } from '@/content/community';
-import { Users, TrendingUp, Megaphone, ArrowRight } from 'lucide-react';
+import { TrendingUp, Megaphone, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CommunityPage() {
@@ -17,19 +18,13 @@ export default function CommunityPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <div className="flex items-center gap-2 mb-1">
-          <Users className="h-5 w-5 text-primary" aria-hidden="true" />
-          <h1 className="text-xl font-bold text-text-primary">
-            {locale === 'en' ? 'Community Development' : 'சமூக மேம்பாடு'}
-          </h1>
-        </div>
-        <p className="text-sm text-text-secondary">
-          {locale === 'en'
-            ? 'Build economic resilience and entrepreneurial capability'
-            : 'பொருளாதார நெகிழ்திறன் மற்றும் தொழில் முனைவோர் திறனை கட்டமைத்தல்'}
-        </p>
-      </div>
+      <PillarHero
+        pillar="community"
+        titleEn="Community Development"
+        titleTa="சமூக மேம்பாடு"
+        subtitleEn="Build economic resilience through micro-enterprise, cooperatives, and digital business models. Real stories from people who have done it."
+        subtitleTa="நுண் நிறுவனம், கூட்டுறவு, டிஜிட்டல் வணிக மாதிரிகள் மூலம் பொருளாதார நெகிழ்திறனை கட்டியெழுப்புங்கள். அதை செய்தவர்களின் உண்மையான கதைகள்."
+      />
 
       {/* Community Economy */}
       <AccordionSection

@@ -4,6 +4,7 @@ import { useLocale } from '@/lib/locale-context';
 import AccordionSection from '@/components/AccordionSection';
 import ResourceCard from '@/components/ResourceCard';
 import PathwayCard from '@/components/PathwayCard';
+import PillarHero from '@/components/PillarHero';
 import { technologyContent, technologyPathways } from '@/content/technology';
 import { Smartphone, Video, Store, Briefcase, GraduationCap } from 'lucide-react';
 
@@ -23,19 +24,13 @@ export default function TechnologyPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <div className="flex items-center gap-2 mb-1">
-          <Smartphone className="h-5 w-5 text-primary" aria-hidden="true" />
-          <h1 className="text-xl font-bold text-text-primary">
-            {locale === 'en' ? 'Technology' : 'தொழில்நுட்பம்'}
-          </h1>
-        </div>
-        <p className="text-sm text-text-secondary">
-          {locale === 'en'
-            ? 'Digital and AI literacy for economic participation'
-            : 'பொருளாதார பங்கேற்பிற்கான டிஜிட்டல் மற்றும் AI எழுத்தறிவு'}
-        </p>
-      </div>
+      <PillarHero
+        pillar="technology"
+        titleEn="Technology"
+        titleTa="தொழில்நுட்பம்"
+        subtitleEn="Digital literacy, AI tools in Tamil, and four creator economy pathways for earning with your smartphone. Built for beginners and intermediate users."
+        subtitleTa="டிஜிட்டல் எழுத்தறிவு, தமிழில் AI கருவிகள், உங்கள் ஸ்மார்ட்ஃபோனில் சம்பாதிக்க நான்கு படைப்பாளர் பாதைகள். தொடக்கநிலை மற்றும் இடைநிலை பயனர்களுக்கு."
+      />
 
       {/* Getting Started */}
       <AccordionSection

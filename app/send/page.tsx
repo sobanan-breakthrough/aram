@@ -3,8 +3,9 @@
 import { useLocale } from '@/lib/locale-context';
 import AccordionSection from '@/components/AccordionSection';
 import ResourceCard from '@/components/ResourceCard';
+import PillarHero from '@/components/PillarHero';
 import { sendContent } from '@/content/send';
-import { Accessibility, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
 
 export default function SendPage() {
   const { locale } = useLocale();
@@ -15,19 +16,13 @@ export default function SendPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <div className="flex items-center gap-2 mb-1">
-          <Accessibility className="h-5 w-5 text-primary" aria-hidden="true" />
-          <h1 className="text-xl font-bold text-text-primary">
-            {locale === 'en' ? 'SEND' : 'SEND'}
-          </h1>
-        </div>
-        <p className="text-sm text-text-secondary">
-          {locale === 'en'
-            ? 'Support for children and adults with Special Educational Needs and Disabilities'
-            : 'சிறப்புக் கல்வித் தேவைகள் மற்றும் குறைபாடுகள் உள்ள குழந்தைகள் மற்றும் பெரியவர்களுக்கான ஆதரவு'}
-        </p>
-      </div>
+      <PillarHero
+        pillar="send"
+        titleEn="SEND"
+        titleTa="SEND"
+        subtitleEn="Support for children and adults with Special Educational Needs and Disabilities. Practical home, school, and service guidance — with warmth, not pity."
+        subtitleTa="சிறப்புக் கல்வித் தேவைகள் மற்றும் குறைபாடுகள் உள்ள குழந்தைகள் மற்றும் பெரியவர்களுக்கான ஆதரவு. வீடு, பள்ளி மற்றும் சேவை வழிகாட்டுதல் — பரிதாபமின்றி, அன்புடன்."
+      />
 
       {/* Affirming message */}
       <div className="flex items-start gap-3 rounded-xl bg-success/5 border border-success/20 p-4">

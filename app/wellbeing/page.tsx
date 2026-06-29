@@ -5,8 +5,9 @@ import AccordionSection from '@/components/AccordionSection';
 import ResourceCard from '@/components/ResourceCard';
 import SelfAssessmentTool from '@/components/SelfAssessmentTool';
 import TrainTheTrainerBadge from '@/components/TrainTheTrainerBadge';
+import PillarHero from '@/components/PillarHero';
 import { wellbeingContent } from '@/content/wellbeing';
-import { Heart, BookOpen, Flower2 } from 'lucide-react';
+import { BookOpen, Flower2 } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -20,20 +21,13 @@ export default function WellbeingPage() {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div>
-        <div className="flex items-center gap-2 mb-1">
-          <Heart className="h-5 w-5 text-primary" aria-hidden="true" />
-          <h1 className="text-xl font-bold text-text-primary">
-            {locale === 'en' ? 'Wellbeing' : 'நல்வாழ்வு'}
-          </h1>
-        </div>
-        <p className="text-sm text-text-secondary">
-          {locale === 'en'
-            ? 'Holistic mental, emotional, and spiritual wellbeing support'
-            : 'முழுமையான மன, உணர்வு மற்றும் ஆன்மீக நல்வாழ்வு ஆதரவு'}
-        </p>
-      </div>
+      <PillarHero
+        pillar="wellbeing"
+        titleEn="Wellbeing"
+        titleTa="நல்வாழ்வு"
+        subtitleEn="Holistic mental, emotional, and spiritual wellbeing support. Includes a private self-check-in, crisis hotlines, and a peer support guide for community workers."
+        subtitleTa="முழுமையான மன, உணர்வு மற்றும் ஆன்மீக நல்வாழ்வு ஆதரவு. தனிப்பட்ட சோதனை, நெருக்கடி உதவி எண்கள் மற்றும் சமூக ஊழியர்களுக்கான சக ஆதரவு வழிகாட்டி உள்ளடக்கியது."
+      />
 
       {/* Understanding Wellbeing */}
       <AccordionSection

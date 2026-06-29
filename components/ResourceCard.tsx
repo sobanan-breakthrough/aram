@@ -13,10 +13,30 @@ import {
   Share2,
   Volume2,
   Square,
+  Clock,
+  BookOpen,
+  Building2,
+  Quote,
+  Lightbulb,
+  Route,
 } from 'lucide-react';
 import TrainTheTrainerBadge from './TrainTheTrainerBadge';
+import Markdown, { readingTimeMinutes } from './Markdown';
 import type { ContentItem } from '@/lib/types';
 import { speak, isSpeechSupported, type ActiveSpeech } from '@/lib/speech';
+
+// Type label config — small icon + label shown on each card so users can
+// scan and find what kind of content it is at a glance.
+const TYPE_LABELS: Record<
+  ContentItem['type'],
+  { icon: typeof BookOpen; en: string; ta: string }
+> = {
+  resource: { icon: Building2, en: 'Service', ta: 'சேவை' },
+  guide: { icon: BookOpen, en: 'Guide', ta: 'வழிகாட்டி' },
+  story: { icon: Quote, en: 'Story', ta: 'கதை' },
+  explainer: { icon: Lightbulb, en: 'Explainer', ta: 'விளக்கம்' },
+  pathway: { icon: Route, en: 'Pathway', ta: 'பாதை' },
+};
 
 interface ResourceCardProps {
   item: ContentItem;
@@ -42,6 +62,7 @@ export default function ResourceCard({ item }: ResourceCardProps) {
   const title = locale === 'en' ? item.titleEn : item.titleTa;
   const body = locale === 'en' ? item.bodyEn : item.bodyTa;
   const saved = isFavourite(item.id);
+  const readingMinutes = readingTimeMinutes(body);
 
   const handleShare = async () => {
     const shareText = `${title}\n\n${body}\n\n— Aram | அறம் (https://aram-vert.vercel.app)`;
@@ -97,14 +118,40 @@ export default function ResourceCard({ item }: ResourceCardProps) {
   };
 
   return (
-    <article className="rounded-xl bg-surface border border-border p-4 hover:border-primary/20 transition-colors">
-      <div className="flex items-start justify-between gap-3">
-        <h3 className="text-[15px] font-semibold text-text-primary leading-snug flex-1">
-          {title}
-        </h3>
+    <article className="rounded-xl bg-surface border border-border p-4 sm:p-5 hover:border-primary/20 transition-colors">
+      {/* Eyebrow row: content type + reading time */}
+      <div className="flex items-center justify-between gap-2 mb-2">
+        <div className="flex items-center gap-2 min-w-0">
+          {(() => {
+            const meta = TYPE_LABELS[item.type];
+            const Icon = meta.icon;
+            return (
+              <span className="inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-text-secondary">
+                <Icon className="h-3 w-3" aria-hidden="true" />
+                {locale === 'en' ? meta.en : meta.ta}
+              </span>
+            );
+          })()}
+          {readingMinutes >= 2 && (
+            <span className="inline-flex items-center gap-1 text-[11px] text-text-secondary">
+              <span className="text-border" aria-hidden="true">·</span>
+              <Clock className="h-3 w-3" aria-hidden="true" />
+              {readingMinutes} {locale === 'en' ? 'min read' : 'நிமிட வாசிப்பு'}
+            </span>
+          )}
+        </div>
         {item.trainerResource && <TrainTheTrainerBadge />}
       </div>
-      <p className="text-sm text-text-secondary mt-2 leading-relaxed">{body}</p>
+
+      <h3 className="text-base sm:text-lg font-semibold text-text-primary leading-snug">
+        {title}
+      </h3>
+
+      {/* Body — now markdown-aware. Bigger text and tighter measure for
+          comfortable reading on long content. */}
+      <div className="mt-2 text-[15px] text-text-secondary max-w-prose">
+        <Markdown text={body} />
+      </div>
 
       {item.tags.length > 0 && (
         <div className="flex flex-wrap gap-1.5 mt-3">

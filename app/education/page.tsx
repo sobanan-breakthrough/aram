@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { useLocale } from '@/lib/locale-context';
 import AccordionSection from '@/components/AccordionSection';
 import ResourceCard from '@/components/ResourceCard';
+import PillarHero from '@/components/PillarHero';
 import { educationContent } from '@/content/education';
-import { GraduationCap } from 'lucide-react';
 
 const ageGroups = [
   { key: 'all', labelEn: 'All', labelTa: 'அனைத்தும்' },
@@ -34,19 +34,13 @@ export default function EducationPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <div className="flex items-center gap-2 mb-1">
-          <GraduationCap className="h-5 w-5 text-primary" aria-hidden="true" />
-          <h1 className="text-xl font-bold text-text-primary">
-            {locale === 'en' ? 'Education' : 'கல்வி'}
-          </h1>
-        </div>
-        <p className="text-sm text-text-secondary">
-          {locale === 'en'
-            ? 'Educational support for children and adult learners'
-            : 'குழந்தைகள் மற்றும் பெரியவர் கற்போருக்கான கல்வி ஆதரவு'}
-        </p>
-      </div>
+      <PillarHero
+        pillar="education"
+        titleEn="Education"
+        titleTa="கல்வி"
+        subtitleEn="Support for children, adult learners, and everyone in between. From early years through O/L, A/L, and university pathways."
+        subtitleTa="குழந்தைகள், பெரியவர் கற்போருக்கு ஆதரவு. ஆரம்ப ஆண்டுகள் முதல் O/L, A/L, பல்கலைக்கழக பாதைகள் வரை."
+      />
 
       {/* Age group filter */}
       <div>

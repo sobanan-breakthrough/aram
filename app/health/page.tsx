@@ -4,8 +4,9 @@ import { useLocale } from '@/lib/locale-context';
 import AccordionSection from '@/components/AccordionSection';
 import ResourceCard from '@/components/ResourceCard';
 import TrainTheTrainerBadge from '@/components/TrainTheTrainerBadge';
+import PillarHero from '@/components/PillarHero';
 import { healthContent } from '@/content/health';
-import { Stethoscope, Building2 } from 'lucide-react';
+import { Building2 } from 'lucide-react';
 import { useState } from 'react';
 
 export default function HealthPage() {
@@ -20,19 +21,13 @@ export default function HealthPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <div className="flex items-center gap-2 mb-1">
-          <Stethoscope className="h-5 w-5 text-primary" aria-hidden="true" />
-          <h1 className="text-xl font-bold text-text-primary">
-            {locale === 'en' ? 'Healthcare' : 'சுகாதாரம்'}
-          </h1>
-        </div>
-        <p className="text-sm text-text-secondary">
-          {locale === 'en'
-            ? 'Health education, awareness, and peer-to-peer signposting'
-            : 'சுகாதார கல்வி, விழிப்புணர்வு மற்றும் சக வழிகாட்டல்'}
-        </p>
-      </div>
+      <PillarHero
+        pillar="health"
+        titleEn="Healthcare"
+        titleTa="சுகாதாரம்"
+        subtitleEn="Health awareness, hospital information, and a guide to navigating Sri Lanka's free public health system. Covers everything from diabetes to maternal care."
+        subtitleTa="சுகாதார விழிப்புணர்வு, மருத்துவமனை தகவல், இலங்கையின் இலவச பொது சுகாதார முறையை வழிசெலுத்தும் வழிகாட்டி. நீரிழிவு முதல் தாய்மை பராமரிப்பு வரை."
+      />
 
       {/* Health Topics */}
       <AccordionSection

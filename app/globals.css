@@ -28,17 +28,46 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.55;
+  letter-spacing: -0.005em;
   text-rendering: optimizeLegibility;
 }
 
-/* Tamil script gets a dedicated stack; also better word-breaking for long compounds */
+/* Tamil script gets a dedicated stack with extra leading. Tamil glyphs are
+   visually taller (vowel marks above and below the baseline) so they need
+   ~10-15% more line-height than Latin to feel comfortable. */
 [lang="ta"] body,
 .font-tamil,
 :lang(ta) {
   font-family: var(--font-tamil), var(--font-sans), system-ui, sans-serif;
   word-break: normal;
   overflow-wrap: anywhere;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+/* Make Tamil paragraph copy slightly larger — Tamil glyphs at 14-15px feel
+   cramped where the same English size feels fine. */
+[lang="ta"] p,
+[lang="ta"] li {
+  font-size: 1.02em;
+}
+
+/* Tighter headings — opposite tweak. Tighter leading reads as more confident
+   on display sizes. */
+h1, h2, h3 {
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+[lang="ta"] h1, [lang="ta"] h2, [lang="ta"] h3 {
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+/* Comfortable measure for long-form body text */
+.max-w-prose {
+  max-width: 65ch;
 }
 
 /* Print styles for PrintableGuide */

@@ -84,16 +84,17 @@ export default function HomePage() {
   const todaysResource = getRandomResource();
 
   return (
-    <div className="space-y-5">
-      {/* Bilingual welcome — intentionally both languages shown */}
-      <header className="text-center py-2 sm:py-4">
-        <h1 className="text-2xl sm:text-3xl font-bold text-primary leading-tight">
+    <div className="space-y-6">
+      {/* Bilingual welcome — intentionally both languages shown side-by-side
+          as a statement of dual-primary languages, not as a hierarchy. */}
+      <header className="text-center pt-4 pb-2 sm:pt-8 sm:pb-4">
+        <h1 className="text-3xl sm:text-5xl font-bold text-primary leading-[1.05] tracking-tight">
           Welcome to Aram
         </h1>
-        <p className="text-xl sm:text-2xl font-bold text-primary font-tamil mt-0.5 leading-tight">
+        <p className="text-2xl sm:text-4xl font-bold text-primary font-tamil mt-1 leading-[1.2]">
           அறத்திற்கு வரவேற்கிறோம்
         </p>
-        <p className="text-sm sm:text-base text-text-secondary mt-3 max-w-md mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg text-text-secondary mt-4 max-w-md mx-auto leading-relaxed">
           {locale === 'en'
             ? 'Resources for stronger communities. Built with you, not for you.'
             : 'வலுவான சமூகங்களுக்கான வளங்கள். உங்களுக்காக அல்ல, உங்களுடன் கட்டப்பட்டது.'}
@@ -128,10 +129,15 @@ export default function HomePage() {
       <HelpFinder />
 
       {/* Pillar grid — responsive: 2 cols mobile, 3 cols tablet, 4 cols desktop */}
-      <section aria-label={locale === 'en' ? 'Resource pillars' : 'வளத் தூண்கள்'}>
-        <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">
-          {locale === 'en' ? 'Explore resources' : 'வளங்களை ஆராயுங்கள்'}
-        </h2>
+      <section aria-label={locale === 'en' ? 'Resource pillars' : 'வளத் தூண்கள்'} className="pt-2">
+        <div className="flex items-baseline justify-between mb-4">
+          <h2 className="text-[11px] font-semibold text-text-secondary uppercase tracking-[0.08em]">
+            {locale === 'en' ? 'Explore resources' : 'வளங்களை ஆராயுங்கள்'}
+          </h2>
+          <span className="text-[11px] text-text-secondary">
+            {locale === 'en' ? '7 sections' : '7 பகுதிகள்'}
+          </span>
+        </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           {pillars.map(pillar => (
             <PillarCard key={pillar.href} {...pillar} />
@@ -140,8 +146,8 @@ export default function HomePage() {
       </section>
 
       {/* Today's Resource */}
-      <section>
-        <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">
+      <section className="pt-2">
+        <h2 className="text-[11px] font-semibold text-text-secondary uppercase tracking-[0.08em] mb-4">
           {locale === 'en' ? "Today's Resource" : 'இன்றைய வளம்'}
         </h2>
         <ResourceCard item={todaysResource} />

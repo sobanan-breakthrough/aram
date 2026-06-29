@@ -3,8 +3,9 @@
 import { useLocale } from '@/lib/locale-context';
 import AccordionSection from '@/components/AccordionSection';
 import ResourceCard from '@/components/ResourceCard';
+import PillarHero from '@/components/PillarHero';
 import { diasporaContent } from '@/content/diaspora';
-import { Globe, AlertCircle } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 
 export default function DiasporaPage() {
   const { locale } = useLocale();
@@ -15,19 +16,13 @@ export default function DiasporaPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <div className="flex items-center gap-2 mb-1">
-          <Globe className="h-5 w-5 text-primary" aria-hidden="true" />
-          <h1 className="text-xl font-bold text-text-primary">
-            {locale === 'en' ? 'Diaspora Reconnection' : 'புலம்பெயர் மீள்இணைப்பு'}
-          </h1>
-        </div>
-        <p className="text-sm text-text-secondary">
-          {locale === 'en'
-            ? 'Support for Tamil diaspora members connecting with Sri Lanka'
-            : 'இலங்கையுடன் இணையும் தமிழ் புலம்பெயர்ந்தோருக்கான ஆதரவு'}
-        </p>
-      </div>
+      <PillarHero
+        pillar="diaspora"
+        titleEn="Diaspora Reconnection"
+        titleTa="புலம்பெயர் மீள்இணைப்பு"
+        subtitleEn="For Tamil communities worldwide. Visit, support, invest, raise children with Tamil heritage, or reconnect with the language and culture."
+        subtitleTa="உலகெங்கும் உள்ள தமிழ் சமூகங்களுக்கு. வருகை, ஆதரவு, முதலீடு, தமிழ் பாரம்பரியத்துடன் குழந்தைகளை வளர்த்தல், மொழி மற்றும் கலாச்சாரத்துடன் மீள்இணைதல்."
+      />
 
       {/* Context */}
       <AccordionSection
