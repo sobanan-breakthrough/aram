@@ -3,6 +3,7 @@ import { Inter, Noto_Sans_Tamil } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { LocaleProvider } from '@/lib/locale-context';
 import { FavouritesProvider } from '@/lib/favourites-context';
 import TopBar from '@/components/TopBar';
@@ -78,6 +79,7 @@ export default async function RootLayout({
           </LocaleProvider>
         </NextIntlClientProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
