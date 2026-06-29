@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter, Noto_Sans_Tamil } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
+import { Analytics } from '@vercel/analytics/next';
 import { LocaleProvider } from '@/lib/locale-context';
 import { FavouritesProvider } from '@/lib/favourites-context';
 import TopBar from '@/components/TopBar';
@@ -76,6 +77,7 @@ export default async function RootLayout({
             </FavouritesProvider>
           </LocaleProvider>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
