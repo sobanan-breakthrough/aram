@@ -1,18 +1,24 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #D4282B;
-  --color-primary-dark: #B02022;
-  --color-secondary: #F5A623;
-  --color-secondary-dark: #9C5E00;
-  --color-background: #FAFAF8;
+  /* Colours match the official Aram Initiative brand palette from
+     aram.org.uk — primary purple with amber/teal/pink accents. */
+  --color-primary: #70449C;
+  --color-primary-dark: #5A3680;
+  --color-secondary: #FDA800;
+  --color-secondary-dark: #B47500;
+  --color-tertiary: #00B482;
+  --color-accent-pink: #F3006E;
+  --color-accent-blue: #68AEDD;
+  --color-background: #FAF9F7;
   --color-surface: #FFFFFF;
-  --color-text-primary: #1A1A1A;
-  --color-text-secondary: #4A4A45;
-  --color-border: #E2E0D8;
-  --color-success: #2E7D32;
-  --color-info: #1565C0;
+  --color-text-primary: #1A1226;
+  --color-text-secondary: #4A4055;
+  --color-border: #E4DFEB;
+  --color-success: #00B482;
+  --color-info: #68AEDD;
   --font-sans: var(--font-inter);
+  --font-display: var(--font-montserrat);
   --font-tamil: var(--font-noto-sans-tamil);
 }
 
@@ -54,10 +60,18 @@ body {
 }
 
 /* Tighter headings — opposite tweak. Tighter leading reads as more confident
-   on display sizes. */
+   on display sizes. Montserrat is the display face matching aram.org.uk. */
 h1, h2, h3 {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
   line-height: 1.2;
   letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+/* Utility class for opting into the display face on non-heading elements
+   (e.g. the wordmark in TopBar, or hero eyebrows). */
+.font-display {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
 }
 
 [lang="ta"] h1, [lang="ta"] h2, [lang="ta"] h3 {
